@@ -1,0 +1,63 @@
+<h2>Main page</h2>
+<article class="meme">
+    <section class="meme-head">
+
+        <%= will_paginate @meme, :renderer => 'BootstrapPagination::Rails' %>
+
+
+<div class="container">
+  <div class="row">
+        <% @statisticVoting.each do |statisticVoting| %>
+            <% @meme.each do |meme| %>
+              <% if statisticVoting.meme_id == meme.id %>
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <h2><%= link_to meme.title, meme_path(meme) %></h2>
+
+                Rating <%= statisticVoting.rating.to_f.round(2)  %>
+                <br>
+                <small>
+                  <%= image_tag meme.image.url, size: "100x100", class: 'img-responsive' if meme.image? %><br>
+                  <time><%= meme.created_at.to_date.strftime("%d %B, %Y")%></time><br>
+                  Author: <b><%= meme.author %></b> <br>
+                  <%= link_to 'Edit', edit_meme_path(meme), class: 'btn btn-warning' %>
+                  <%= link_to 'Destroy', meme_path(meme), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br>
+                </small>
+                <hr>
+                  </div>
+              <% end %>
+            <% end %>
+        <% end %>
+
+
+
+        <% temp = false %>
+        <% @meme.each do |meme| %>
+          <% @statisticVoting.each do |statisticVoting| %>
+            <% if statisticVoting.meme_id == meme.id%>
+              <% temp = true %>
+            <% end %>
+          <% end %>
+            <% if temp != true %>
+              <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <h2><%= link_to meme.title, meme_path(meme) %></h2>
+
+                Rating
+                <br>
+                <small>
+                  <%= image_tag meme.image.url, size: "100x100", class: 'img-responsive' if meme.image? %><br>
+                  <time><%= meme.created_at.to_date.strftime("%d %B, %Y")%></time><br>
+                    Author: <b><%= meme.author %></b> <br>
+                  <%= link_to 'Edit', edit_meme_path(meme), class: 'btn btn-warning' %>
+                  <%= link_to 'Destroy', meme_path(meme), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br>
+                </small>
+                <hr>
+              </div>
+            <% end %>
+            <% temp = false %>
+        <% end %>
+
+      </div>
+    </div>
+  <%= will_paginate @meme, :renderer => 'BootstrapPagination::Rails' %>
+    </section>
+</article>

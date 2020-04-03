@@ -1,0 +1,30 @@
+<h3> Show memes</h3>
+<article class="meme">
+  <section class="meme-head">
+          <%= image_tag @photo.image.url, size: "200x200" if @photo.image? %><br>
+          <time><%= @photo.created_at.to_date.strftime("%d %B, %Y")%></time>
+  </section>
+  <% if @photo.errors.any?  %>
+    <div class="alert alert-danger">
+        <h2>
+          <%= pluralize(@photo.errors.count, "error") %> prohibited
+          Photo from being saved:
+        </h2>
+        <ul>
+          <% @photo.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+  <% end %>
+  <section class="meme-body">
+        <h2>Memes</h2>
+
+            <%= simple_form_for ([@photo, @photo.voting.build]) do |u|   %>
+              <%= u.input :rating, collection: 1..10, as: :radio_buttons %>
+              <p><%=u.submit  class: 'btn btn-outline-primary pull-xs-right'%></p>
+            <% end %>
+        </section>
+  <section class="meme-body">
+
+</article>

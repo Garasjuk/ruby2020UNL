@@ -1,0 +1,50 @@
+<h3> Show memes</h3>
+<article class="meme">
+  <section class="meme-head">
+        <h2><%= @meme.title %></h2>
+        <small>
+          <p><%= @meme.description %> </p>
+          <%= image_tag @meme.image.url, size: "200x200" if @meme.image? %><br>
+          <time><%= @meme.created_at.to_date.strftime("%d %B, %Y")%></time>
+          <p><%= @meme.author %> </p>
+        </small>
+  </section>
+
+
+  <%= link_to 'Edit', edit_meme_path(@meme) , class: 'btn btn-warning' %>
+
+  <section class="meme-body">
+        <h2>Memes <%= @meme.photo.length %> </h2>
+          <% @meme.photo.each do |photo| %>
+              <%= image_tag photo.image.url, size: "200x100" if photo.image? %>
+              <p>Rating </p>
+
+              <p><%= link_to 'Voting', meme_photo_path(photo.id), class: 'btn btn-secondary' %>
+              <%= link_to 'Delete', meme_photo_path(photo.id), method: :delete, data:{confirm: 'Are you sure?'} ,class: 'btn btn-danger' %></p>
+          <% end %>
+  </section>
+  <% if @meme.errors.any?  %>
+    <div class="alert alert-danger">
+        <h2>
+          <%= pluralize(@meme.errors.count, "error") %> prohibited
+          Meme task from being saved:
+        </h2>
+        <ul>
+          <% @meme.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+  <% end %>
+  <% if @meme.photo.length < 10 %>
+      <section class="meme-body">
+        <%= simple_form_for @meme.photo.build, html: {multipart: true}, url: meme_photos_path(@meme), method: :post   do |f| %>
+          <p>Image <br>
+            <%=f.file_field :image , class: 'btn btn-light' %></p>
+            <%= f.hidden_field :id, :value => @meme.id %>
+          <p><%=f.submit class: 'btn btn-outline-primary pull-xs-right' %></p>
+        <% end %>
+    </section>
+  <% end %>
+
+</article>

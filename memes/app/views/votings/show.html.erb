@@ -1,0 +1,38 @@
+<h3> Show memes</h3>
+<article class="meme">
+  <section class="meme-head">
+        <h2><%= @meme.title %></h2>
+        <small>
+          <p><%= @meme.description %> </p>
+          <%= image_tag @meme.image.url, size: "200x200" if @meme.image? %><br>
+          <time><%= @meme.created_at.to_date.strftime("%d %B, %Y")%></time>
+          <p><%= @meme.author %> </p>
+        </small>
+  </section>
+
+  <%= link_to 'Edit', edit_meme_path(@meme) %>
+
+  <section class="meme-body">
+        <h2>Memes</h2>
+
+          <% @meme.photo.each do |photo| %>
+            <%= form_for :voting, url: meme_photo_path(photo), method: :post do |u|   %>
+
+              <%= image_tag photo.image.url, size: "200x200" if photo.image? %>
+              <%= u.input :rating, collection: 1..10, as: :radio_buttons %>
+              <p><%= photo.id %></p>
+              <p><%=u.submit %></p>
+            <% end %>
+        <% end %>
+  </section>
+  <section class="meme-body">
+
+    <%= form_for @meme.photo.build, html: {multipart: true}, url: meme_photo_path(@meme), method: :post   do |f| %>
+      <p>Image <br>
+        <%=f.file_field :image %></p>
+        <%= f.hidden_field :id, :value => @meme.id %>
+      <p><%=f.submit %></p>
+    <% end %>
+  </section>
+
+</article>
