@@ -1,0 +1,56 @@
+
+<article class="audio">
+    <section class="audio-head">
+
+
+      <h2><%= @group.name %></h2>
+      <p><%= @group.description %></p>
+        <div class="container">
+          <h1>Artist</h1>
+          <div class="row">
+            <% @artist.each do |artist| %>
+              <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <h3><%= link_to artist.name, artist_path(artist) %></h3>
+                <br>
+                <small>
+                  <%= image_tag artist.image.url, size: "100x100", class: 'img-responsive' if artist.image? %><br>
+                  Description: <b><%= artist.description %></b> <br>
+                  <%= link_to 'Edit', edit_artist_path(artist), class: 'btn btn-warning' %>
+                  <%= link_to 'Destroy', artist_path(artist), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br>
+                </small>
+                <hr>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <hr>
+        <div class="container">
+          <h1>Albom</h1>
+          <div class="row">
+            <% @albom.each do |albom| %>
+              <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <h2><%= link_to albom.aname, albom_path(albom.aid) %></h2>
+                <br>
+                <small>
+                  <%= image_tag albom.image.url, size: "100x100", class: 'img-responsive' if albom.image? %><br>
+                  Description: <b><%= albom.description %></b> <br>
+                  Gener: <b><%= albom.name %></b> <br
+                  <%= link_to 'Edit', edit_albom_path(albom.aid), class: 'btn btn-warning' %>
+                  <%= link_to 'Destroy', albom_path(albom.aid), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br>
+                </small>
+                <hr>
+              </div>
+            <% end %>
+
+            <%= link_to 'New albom', new_group_albom_path(@group.id),  class: 'btn btn-warning' %>
+          </div>
+        </div>
+
+
+
+
+
+
+
+    </section>
+</article>
