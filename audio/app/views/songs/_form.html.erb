@@ -1,0 +1,22 @@
+
+  <article class="audio">
+    <section class="audio-head">
+      Albom: <b><%= @albom %></b> <br>
+
+      <%= simple_form_for @song, html: {multipart: true}, url: albom_songs_path do |f| %>
+      <p>
+        Name <br>
+        <%=f.text_field :name %>
+      </p>
+
+      <p>
+        Image <br>
+        <%=f.file_field :podcast %>
+      </p>
+        <%= f.hidden_field :albom_id, :value => @albom %>
+        <p>
+        <%=f.submit class: 'btn btn-dark' %>
+      </p>
+      <% end %>
+    </section>
+  </article>

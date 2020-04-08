@@ -1,0 +1,15 @@
+<h2>New Artist</h2>
+
+<% if @artist.errors.any?  %>
+       <div class="alert alert-danger">
+           <h2>
+             <%= pluralize(@artist.errors.count, "error") %> 
+           </h2>
+           <ul>
+             <% @artist.errors.full_messages.each do |msg| %>
+               <li><%= msg %></li>
+             <% end %>
+           </ul>
+         </div>
+     <% end %>
+<%= render 'form' %>

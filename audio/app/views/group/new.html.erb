@@ -1,0 +1,22 @@
+<h2>New Group</h2>
+  <article class="audio">
+      <section class="audio-head">
+
+        <% if @group.errors.any?  %>
+               <div class="alert alert-danger">
+                   <h2>
+                     <%= pluralize(@group.errors.count, "error") %> 
+                   </h2>
+                   <ul>
+                     <% @group.errors.full_messages.each do |msg| %>
+                       <li><%= msg %></li>
+                     <% end %>
+                   </ul>
+                 </div>
+             <% end %>
+
+        <%= render 'form' %>
+
+
+    </section>
+  </article">

@@ -1,0 +1,2 @@
+module AlbomHelper
+end

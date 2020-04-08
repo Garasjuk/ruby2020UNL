@@ -1,0 +1,29 @@
+<h2>New gener</h2>
+
+
+<% if @gener.errors.any?  %>
+       <div class="alert alert-danger">
+           <h2>
+             <%= pluralize(@gener.errors.count, "error") %> 
+           </h2>
+           <ul>
+             <% @gener.errors.full_messages.each do |msg| %>
+               <li><%= msg %></li>
+             <% end %>
+           </ul>
+         </div>
+     <% end %>
+
+     <article class="audio">
+       <section class="audio-head">
+         <%= simple_form_for @gener, html: {multipart: true}, url: geners_path do |f| %>
+         <p>
+           Name <br>
+           <%=f.text_field :name %>
+         </p>
+         <p>
+           <%=f.submit class: 'btn btn-dark' %>
+         </p>
+         <% end %>
+       </section>
+     </article>

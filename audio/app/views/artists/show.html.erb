@@ -1,0 +1,18 @@
+
+<article class="audio">
+    <section class="audio-head">
+
+            <% @artist.each do |artist| %>
+              <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                Artist:<h4><%= artist.name %></h4>
+                Description: <b><%= artist.description %></b> <br>
+                <%= image_tag artist.image.url, size: "100x100", class: 'img-responsive' if artist.image? %><br>
+                <%= link_to 'Edit', edit_artist_path(artist), class: 'btn btn-warning' %>
+                <%= link_to 'Destroy', artist_path(artist), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br>
+                <hr>
+              </div>
+            <% end %>
+            
+        <hr>
+    </section>
+</article>
