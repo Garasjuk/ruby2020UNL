@@ -21,6 +21,7 @@
                 <hr>
               </div>
             <% end %>
+              <%= link_to 'New artist', new_group_artist_path(@group.id),  class: 'btn btn-warning' %>
           </div>
         </div>
         <hr>
@@ -34,7 +35,9 @@
                 <small>
                   <%= image_tag albom.image.url, size: "100x100", class: 'img-responsive' if albom.image? %><br>
                   Description: <b><%= albom.description %></b> <br>
-                  Gener: <b><%= albom.name %></b> <br
+                  Gener: <b><%= albom.name %></b> <br>
+
+
                   <%= link_to 'Edit', edit_albom_path(albom.aid), class: 'btn btn-warning' %>
                   <%= link_to 'Destroy', albom_path(albom.aid), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br>
                 </small>

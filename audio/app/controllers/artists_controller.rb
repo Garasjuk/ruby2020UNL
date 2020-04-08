@@ -6,6 +6,7 @@ class ArtistsController < ApplicationController
     end
 
     def new
+      @group = params[:group_id]
       @artist = Artist.new
     end
 
@@ -21,30 +22,35 @@ class ArtistsController < ApplicationController
 
     def update
       @artist = Artist.find(params[:id])
-      if @artist.update()
-        redirect_to artist_path
+      if @artist.update(project_params)
+        redirect_to group_path(@artist.group_id)
       else
         render 'new'
       end
     end
 
     def destroy
+      Artist.transaction do
         @artist = Artist.find(params[:id])
         @artist.destroy
-        redirect_to artist_path
+      end
+        redirect_to group_path(@artist.group_id)
     end
 
     def create
-      @artist = Artist.new(project_params)
-      if @artist.save
-        redirect_to @artist
-      else
-        render 'new'
+      #render plain: params[:artist].inspect
+      Artist.transaction do
+        @artist = Artist.new(project_params)
+        if @artist.save
+          redirect_to group_path(@artist.group_id)
+        else
+          render 'new'
+        end
       end
     end
 
     private def project_params
-        params.require(:artist).permit(:name, :description, :image)
+        params.require(:artist).permit(:name, :description, :image, :group_id)
     end
 
 

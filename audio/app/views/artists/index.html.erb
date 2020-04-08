@@ -1,32 +1,9 @@
-<h2>Main page</h2>
+<h2>artist</h2>
 <article class="audio">
     <section class="audio-head">
-
-        <%# <%= will_paginate @meme, :renderer => 'BootstrapPagination::Rails' %> %>
-
-
-<div class="container">
-  <div class="row">
-        <% @group.each do |group| %>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                  <h2><%= link_to group.name, group_path(group) %></h2>
-                  <br>
-                  <small>
-                    <%= image_tag group.image.url, size: "100x100", class: 'img-responsive' if group.image? %><br>
-
-                    Description: <b><%= group.description %></b> <br>
-                    <%= link_to 'Edit', edit_group_path(group), class: 'btn btn-warning' %>
-                    <%= link_to 'Destroy', group_path(group), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br>
-                  </small>
-                  <hr>
-                </div>
-        <% end %>
-
-
-
-
+      <div class="container">
+        <div class="row">
+        </div>
       </div>
-    </div>
-  <%# <%= will_paginate @meme, :renderer => 'BootstrapPagination::Rails' %> %>
     </section>
 </article>

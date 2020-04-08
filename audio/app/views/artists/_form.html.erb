@@ -1,7 +1,8 @@
 
   <article class="audio">
     <section class="audio-head">
-      <%= simple_form_for :group, html: {multipart: true}, url: group_path do |f| %>
+      
+      <%= simple_form_for @artist, html: {multipart: true}, url: artists_path do |f| %>
       <p>
         Name <br>
         <%=f.text_field :name %>
@@ -16,6 +17,7 @@
         <%=f.file_field :image %>
       </p>
 
+        <%= f.hidden_field :group_id, :value => @group %>
         <p>
         <%=f.submit class: 'btn btn-dark' %>
       </p>

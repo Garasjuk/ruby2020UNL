@@ -15,13 +15,15 @@
                 <br>
                 <small>
                   Podcast: <b><%= song.podcast %></b> <br>
+                    id: <b><%= song.id %></b> <br>
                   <%= link_to 'Edit', edit_albom_song_path(song), class: 'btn btn-warning' %>
                   <%= link_to 'Destroy', albom_song_path(song), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br>
                 </small>
                 <hr>
               </div>
             <% end %>
-            
+              Albom: <b><%= @albom.id %></b> <br>
+              <%= link_to 'New song', new_albom_song_path(@albom.id),  class: 'btn btn-warning' %>
           </div>
         </div>
         <hr>

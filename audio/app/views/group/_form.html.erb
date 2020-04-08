@@ -1,7 +1,7 @@
 
   <article class="audio">
     <section class="audio-head">
-      <%= simple_form_for :group, html: {multipart: true}, url: group_path do |f| %>
+      <%= simple_form_for @group, html: {multipart: true}, url: group_index_path do |f| %>
       <p>
         Name <br>
         <%=f.text_field :name %>

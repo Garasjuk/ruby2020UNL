@@ -3,7 +3,7 @@
 <article class="audio">
   <section class="audio-head">
     <%# <%= simple_form_for :albom, html: {multipart: true}, url: group_alboms_path do |f| %> %>
-    <%= simple_form_for :albom, html: {multipart: true}, url: group_alboms_path do |f| %>
+    <%= form_for @albom, html: {multipart: true}, url: group_alboms_path do |f| %>
 
     <p>
       Name <br>
@@ -25,13 +25,14 @@
       <%= f.hidden_field :artist_id, :value => @group %>
       <%= f.hidden_field :group_id, :value => @group %>
     </p>
-      <%= f.fields_for :song do |a| %>
-      <p>
-        Name <br>
-        <%=a.text_field :name %>
-      </p>
-      <% end %>
-
+    <% @albom.songs.each do |song| %>
+        <%= f.fields_for :songs, song do |a| %>
+          <p>
+            Name <br>
+            <%=a.text_field :name %>
+          </p>
+        <% end %>
+    <% end %>
       <p>
       <%=f.submit class: 'btn btn-dark' %>
     </p>

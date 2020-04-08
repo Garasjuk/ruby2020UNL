@@ -21,25 +21,29 @@ class GroupController < ApplicationController
 
   def update
     @group = Group.find(params[:id])
-    if @group.update()
-      redirect_to group_path
+    if @group.update(project_params)
+      redirect_to group_index_path
     else
       render 'new'
     end
   end
 
   def destroy
+    Group.transaction do
       @group = Group.find(params[:id])
       @group.destroy
-      redirect_to group_path
+    end
+    redirect_to group_index_path
   end
 
   def create
-    @group = Group.new(project_params)
-    if @group.save
-      redirect_to @group
-    else
-      render 'new'
+    Group.transaction do
+      @group = Group.new(project_params)
+      if @group.save
+        redirect_to @group
+      else
+        render 'new'
+      end
     end
   end
 
