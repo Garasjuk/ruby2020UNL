@@ -1,0 +1,3 @@
+class Friend < User
+
+end

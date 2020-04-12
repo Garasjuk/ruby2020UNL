@@ -1,0 +1,48 @@
+
+<article class="people">
+  <section class="people-head">
+    <% if @user.errors.any?  %>
+       <div class="alert alert-danger">
+           <h2>
+             <%= pluralize(@user.errors.count, "error") %>
+           </h2>
+           <ul>
+             <% @user.errors.full_messages.each do |msg| %>
+               <li><%= msg %></li>
+             <% end %>
+           </ul>
+         </div>
+     <% end %>
+
+    <%= form_for @user , url: user_path(@user)  do |f| %>
+      <p>
+        <%= f.label :name %> <br>
+        <%= f.text_field :name %>
+        <%= f.hidden_field :name_before, :value => @user.name %>
+      </p>
+      <p>
+        <%= f.hidden_field :type_before, :value => @user.type %>
+        <%= f.label :type%> <br>
+        <%= f.hidden_field :id, :value => @user.id %>
+
+        <% if @user.type == 'Friend' %>
+          <%= f.select(:type, options_for_select([['Friend', 'Friend'], ['Neutrality', 'Neutrality']], selected: f.object.type), include_blank: true)%>
+        <% end %>
+
+        <% if @user.type == 'Enemy' %>
+          <%= f.select(:type, options_for_select([['Enemy', 'Enemy'], ['Neutrality', 'Neutrality']], selected: f.object.type), include_blank: true)%>
+        <% end %>
+
+        <% if @user.type == 'Neutrality' %>
+          <%= f.select(:type, options_for_select([['Friend', 'Friend'], ['Enemy', 'Enemy'], ['Neutrality', 'Neutrality']], selected: f.object.type), include_blank: true)%>
+        <% end %>
+
+
+
+      </p>
+      <p>
+        <%=f.submit class: 'btn btn-dark' %>
+      </p>
+    <% end %>
+  </section>
+</article>

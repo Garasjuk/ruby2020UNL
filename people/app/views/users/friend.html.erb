@@ -1,0 +1,26 @@
+<article class="people">
+    <section class="people-head">
+      <div class="container">
+        <h2>Main page</h2>
+
+            <%= will_paginate @friend, :renderer => 'BootstrapPagination::Rails' %>
+
+          <div class="row">
+            <% @friend.each do |friend| %>
+                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                      <h2><%= link_to friend.name, friend_path(friend) %></h2>
+                      <br>
+                      <small>
+                        Type: <b><%= friend.type %></b> <br>
+                        <%= link_to 'Edit', edit_user_path(friend), class: 'btn btn-warning' %>
+                        <%= link_to 'Destroy', user_path(friend), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br>
+                      </small>
+                      <hr>
+                    </div>
+            <% end %>
+          </div>
+
+        <%= will_paginate @friend, :renderer => 'BootstrapPagination::Rails' %>
+        </div>
+    </section>
+</article>
