@@ -1,0 +1,484 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/commands":
+    post:
+      summary: Add command
+      tags:
+      - Commands
+      parameters: []
+      responses:
+        '201':
+          description: command created
+          content: {}
+        '422':
+          description: invalid request
+          content: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                region:
+                  type: string
+              required:
+              - name
+              - region
+    get:
+      summary: All a command
+      tags:
+      - Commands
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: command found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  region:
+                    type: string
+                required:
+                - id
+                - name
+                - region
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  region:
+                    type: string
+                required:
+                - id
+                - name
+                - region
+        '404':
+          description: command not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+  "/comands/{id}":
+    get:
+      summary: Retrieves a command
+      tags:
+      - Commands
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: command found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  region:
+                    type: string
+                required:
+                - id
+                - name
+                - region
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  region:
+                    type: string
+                required:
+                - id
+                - name
+                - region
+        '404':
+          description: command not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+  "/commands/{id}":
+    get:
+      summary: Get command by id
+      tags:
+      - Commands
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: command found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  region:
+                    type: string
+                required:
+                - id
+                - name
+                - region
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  region:
+                    type: string
+                required:
+                - id
+                - name
+                - region
+        '404':
+          description: command not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+    delete:
+      summary: Delete a command
+      tags:
+      - Commands
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '404':
+          description: command not found
+          content: {}
+        '400':
+          description: Invalid ID
+          content: {}
+  "/commands/new":
+    put:
+      summary: Update a command
+      tags:
+      - Commands
+      parameters: []
+      responses:
+        '201':
+          description: command update
+          content: {}
+        '404':
+          description: Command not found
+          content: {}
+        '422':
+          description: invalid request
+          content: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                region:
+                  type: string
+              required:
+              - name
+              - region
+  "/commands/{name}":
+    get:
+      summary: Get command by name
+      tags:
+      - Commands
+      parameters:
+      - name: name
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: command found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  region:
+                    type: string
+                required:
+                - name
+                - region
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  region:
+                    type: string
+                required:
+                - name
+                - region
+        '404':
+          description: command not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+  "/users":
+    get:
+      summary: Get all users
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: user found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  phone:
+                    type: string
+                  male:
+                    type: string
+                required:
+                - name
+                - phone
+                - male
+        '404':
+          description: user not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+    put:
+      summary: update a user
+      tags:
+      - Users
+      parameters: []
+      responses:
+        '201':
+          description: user create
+          content: {}
+        '404':
+          description: User not found
+          content: {}
+        '422':
+          description: invalid request
+          content: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                phone:
+                  type: string
+                male:
+                  type: string
+              required:
+              - name
+              - phone
+              - male
+  "/users/new":
+    post:
+      summary: new a user
+      tags:
+      - Users
+      parameters: []
+      responses:
+        '201':
+          description: user create
+          content: {}
+        '404':
+          description: User not found
+          content: {}
+        '422':
+          description: invalid request
+          content: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                phone:
+                  type: string
+                male:
+                  type: string
+              required:
+              - name
+              - phone
+              - male
+  "/commands/{id}/users/{id}/edit":
+    put:
+      summary: Update User
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: user found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  phone:
+                    type: string
+                  male:
+                    type: string
+                required:
+                - name
+                - phone
+                - male
+        '404':
+          description: user not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+  "/commands/{id}/users/{id}":
+    get:
+      summary: Get user by id
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: user found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  phone:
+                    type: string
+                  male:
+                    type: string
+                required:
+                - name
+                - phone
+                - male
+        '404':
+          description: user not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+    delete:
+      summary: Delete a user
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '404':
+          description: user not found
+          content: {}
+        '400':
+          description: Invalid ID
+          content: {}
+  "/users/{name}":
+    get:
+      summary: Get user by name
+      tags:
+      - Users
+      parameters:
+      - name: name
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: user found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  phone:
+                    type: string
+                  male:
+                    type: string
+                required:
+                - name
+                - phone
+                - male
+        '404':
+          description: user not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com

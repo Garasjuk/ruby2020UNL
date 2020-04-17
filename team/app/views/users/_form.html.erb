@@ -1,0 +1,42 @@
+
+<article class="team">
+	<section class="team-head">
+		<%= form_for @user do |f| %>
+			<% if @user.errors.any?  %>
+				<div class="alert alert-danger">
+					<h2>
+						<%= pluralize(@user.errors.count, "error") %> prohibited
+						User from being saved:
+					</h2>
+					<ul>
+						<% @user.errors.full_messages.each do |msg| %>
+							<li><%= msg %></li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+
+			<p>
+				<%= f.label :name %> <br>
+				<%= f.text_field :name %>
+			</p>
+			<p>
+				<%= f.label :phone %> <br>
+				<%=f.text_field :phone %>
+			</p>
+			<p>
+				<%= f.label :male %> <br>
+				<%=f.text_field :male %>
+			</p>
+			<p>
+				
+				<%= f.collection_select :command_id, @command, :id, :name, {include_blank: 'Please Select'}%>
+
+
+			</p>
+			<p>
+				<%=f.submit class: 'btn btn-dark' %>
+			</p>
+		<% end %>
+	</section>
+</article>

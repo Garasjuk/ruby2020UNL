@@ -1,0 +1,25 @@
+<h4>User in command</h4>
+<article class="team">
+    <section class="team-head">
+		<h2><%= @command.name %></h2>
+			
+				
+		<div class="container">
+			<div class="row">
+				<% @command.user.each do |user| %>
+					<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+						<h2><%= link_to user.name, command_user_path(user.id) %></h2>
+						<br>
+						<small>
+							Phome: <b><%= user.phone %></b> <br>
+							Male: <b><%= user.male %></b> <br>
+							<%= link_to 'Edit', edit_command_user_path(user.id), class: 'btn btn-warning' %>
+							<%= link_to 'Destroy', command_user_path(user.id), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br>
+						</small>
+						<hr>
+					</div>
+				<% end %>     
+			</div>
+		</div>
+    </section>
+</article>

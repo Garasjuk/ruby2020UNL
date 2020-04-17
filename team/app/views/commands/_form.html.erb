@@ -1,0 +1,32 @@
+
+<article class="team">
+	<section class="team-head">
+		<%= form_for @command do |f| %>
+			<% if @command.errors.any?  %>
+				<div class="alert alert-danger">
+					<h2>
+						<%= pluralize(@command.errors.count, "error") %> prohibited
+						Command from being saved:
+					</h2>
+					<ul>
+						<% @command.errors.full_messages.each do |msg| %>
+							<li><%= msg %></li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+
+			<p>
+				<%= f.label :name %> <br>
+				<%= f.text_field :name %>
+			</p>
+			<p>
+				<%= f.label :region %> <br>
+				<%=f.text_field :region %>
+			</p>
+			<p>
+				<%=f.submit class: 'btn btn-dark' %>
+			</p>
+		<% end %>
+	</section>
+</article>
