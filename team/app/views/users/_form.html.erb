@@ -29,10 +29,11 @@
 				<%=f.text_field :male %>
 			</p>
 			<p>
-				
 				<%= f.collection_select :command_id, @command, :id, :name, {include_blank: 'Please Select'}%>
-
-
+			</p>
+			<p>
+				<%= f.label :password %> <br>
+				<%=f.password_field :password %>
 			</p>
 			<p>
 				<%=f.submit class: 'btn btn-dark' %>

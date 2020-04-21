@@ -17,6 +17,9 @@ paths:
         '422':
           description: invalid request
           content: {}
+        '401':
+          description: UnauthorizedError
+          content: {}
       requestBody:
         content:
           application/json:
@@ -68,6 +71,9 @@ paths:
                 - id
                 - name
                 - region
+        '401':
+          description: UnauthorizedError
+          content: {}
         '404':
           description: command not found
           content: {}
@@ -162,6 +168,9 @@ paths:
                 - id
                 - name
                 - region
+        '401':
+          description: UnauthorizedError
+          content: {}
         '404':
           description: command not found
           content: {}
@@ -179,6 +188,9 @@ paths:
         schema:
           type: string
       responses:
+        '401':
+          description: UnauthorizedError
+          content: {}
         '404':
           description: command not found
           content: {}
@@ -194,6 +206,9 @@ paths:
       responses:
         '201':
           description: command update
+          content: {}
+        '401':
+          description: UnauthorizedError
           content: {}
         '404':
           description: Command not found
@@ -251,6 +266,9 @@ paths:
                 required:
                 - name
                 - region
+        '401':
+          description: UnauthorizedError
+          content: {}
         '404':
           description: command not found
           content: {}
@@ -286,6 +304,9 @@ paths:
                 - name
                 - phone
                 - male
+        '401':
+          description: UnauthorizedError
+          content: {}
         '404':
           description: user not found
           content: {}
@@ -300,6 +321,9 @@ paths:
       responses:
         '201':
           description: user create
+          content: {}
+        '401':
+          description: UnauthorizedError
           content: {}
         '404':
           description: User not found
@@ -332,6 +356,9 @@ paths:
       responses:
         '201':
           description: user create
+          content: {}
+        '401':
+          description: UnauthorizedError
           content: {}
         '404':
           description: User not found
@@ -384,6 +411,9 @@ paths:
                 - name
                 - phone
                 - male
+        '401':
+          description: UnauthorizedError
+          content: {}
         '404':
           description: user not found
           content: {}
@@ -419,6 +449,9 @@ paths:
                 - name
                 - phone
                 - male
+        '401':
+          description: UnauthorizedError
+          content: {}
         '404':
           description: user not found
           content: {}
@@ -436,6 +469,9 @@ paths:
         schema:
           type: string
       responses:
+        '401':
+          description: UnauthorizedError
+          content: {}
         '404':
           description: user not found
           content: {}
@@ -471,6 +507,9 @@ paths:
                 - name
                 - phone
                 - male
+        '401':
+          description: UnauthorizedError
+          content: {}
         '404':
           description: user not found
           content: {}

@@ -15,6 +15,9 @@ RSpec.describe 'api/my_controler', type: :request do
 				required: [ 'name', 'region' ]
 			}
 
+			response '401' , 'UnauthorizedError' do
+				run_test!
+			end
 			response '201', 'command created' do
 				let(:command) { { name: 'foo', region: 'bar' } }
 				run_test!
@@ -40,6 +43,9 @@ RSpec.describe 'api/my_controler', type: :request do
 				let(:id) { Command.create(name: 'foo', region: 'bar').id }
 				run_test!
 			end
+			response '401' , 'UnauthorizedError' do
+				run_test!
+			end
 			response '404', 'command not found' do
 				let(:id) { 'invalid' }
 				run_test!
@@ -50,7 +56,7 @@ RSpec.describe 'api/my_controler', type: :request do
 			end
 		end
 	end
-	path '/commands/{id}' do	
+	path '/commands/{id}' do
 		get 'Get command by id' do
 			tags 'Commands'
 			produces 'application/json', 'application/xml'
@@ -66,6 +72,9 @@ RSpec.describe 'api/my_controler', type: :request do
 				let(:id) { Command.create(name: 'foo', region: 'bar').id }
 				run_test!
 			end
+			response '401' , 'UnauthorizedError' do
+				run_test!
+			end
 			response '404', 'command not found' do
 				let(:id) { 'invalid' }
 				run_test!
@@ -79,7 +88,9 @@ RSpec.describe 'api/my_controler', type: :request do
 			tags 'Commands'
 			produces 'application/json', 'application/xml'
 			parameter name: :id, in: :path, type: :string
-			
+			response '401' , 'UnauthorizedError' do
+				run_test!
+			end
 			response '404', 'command not found' do
 				let(:id) { 'invalid' }
 				run_test!
@@ -106,6 +117,9 @@ RSpec.describe 'api/my_controler', type: :request do
 				let(:command) { { name: 'foo', region: 'bar' } }
 				run_test!
 			end
+			response '401' , 'UnauthorizedError' do
+				run_test!
+			end
 			response '404', 'Command not found' do
 				let(:command) { { name: 'foo' } }
 				run_test!
@@ -116,7 +130,7 @@ RSpec.describe 'api/my_controler', type: :request do
 			end
 		end
 	end
-	 
+
 	path '/commands/{name}' do
 		get 'Get command by name' do
 			tags 'Commands'
@@ -133,6 +147,9 @@ RSpec.describe 'api/my_controler', type: :request do
 				let(:id) { Command.create(name: 'foo', region: 'bar').id }
 				run_test!
 			end
+			response '401' , 'UnauthorizedError' do
+				run_test!
+			end
 			response '404', 'command not found' do
 				let(:id) { 'invalid' }
 				run_test!
@@ -142,7 +159,7 @@ RSpec.describe 'api/my_controler', type: :request do
 				run_test!
 			end
 		end
-	end 
+	end
 	path '/users' do
 		get 'Get all users' do
 			tags 'Users'
@@ -160,6 +177,9 @@ RSpec.describe 'api/my_controler', type: :request do
 				let(:id) { User.create(name: 'foo', phone: '1234567', male: 'm').id }
 				run_test!
 			end
+			response '401' , 'UnauthorizedError' do
+				run_test!
+			end
 			response '404', 'user not found' do
 				let(:id) { 'invalid' }
 				run_test!
@@ -167,9 +187,9 @@ RSpec.describe 'api/my_controler', type: :request do
 			response '406', 'unsupported accept header' do
 				let(:'Accept') { 'application/foo' }
 				run_test!
-			end	
+			end
         end
-		
+
 		put 'update a user' do
 			tags 'Users'
 			consumes 'application/json'
@@ -178,7 +198,7 @@ RSpec.describe 'api/my_controler', type: :request do
 				properties: {
 					name: { type: :string },
 					phone: { type: :string },
-					male: { type: :string }	
+					male: { type: :string }
 				},
 				required: [ 'name', 'phone', 'male' ]
 			}
@@ -187,19 +207,21 @@ RSpec.describe 'api/my_controler', type: :request do
 				let(:user) { { name: 'foo', phone: '1234567', male: 'm' } }
 				run_test!
 			end
-
+			response '401' , 'UnauthorizedError' do
+				run_test!
+			end
 			response '404', 'User not found' do
 				let(:user) { { name: 'foo' } }
 				run_test!
 			end
-			
+
 			response '422', 'invalid request' do
 				let(:user) { { name: 'foo' } }
 				run_test!
 			end
 		end
-	end 
-	
+	end
+
 	path '/users/new' do
 		post 'new a user' do
 			tags 'Users'
@@ -209,7 +231,7 @@ RSpec.describe 'api/my_controler', type: :request do
 				properties: {
 					name: { type: :string },
 					phone: { type: :string },
-					male: { type: :string }	
+					male: { type: :string }
 				},
 				required: [ 'name', 'phone', 'male' ]
 			}
@@ -218,19 +240,21 @@ RSpec.describe 'api/my_controler', type: :request do
 				let(:user) { { name: 'foo', phone: '1234567', male: 'm' } }
 				run_test!
 			end
-
+			response '401' , 'UnauthorizedError' do
+				run_test!
+			end
 			response '404', 'User not found' do
 				let(:user) { { name: 'foo' } }
 				run_test!
 			end
-			
+
 			response '422', 'invalid request' do
 				let(:user) { { name: 'foo' } }
 				run_test!
 			end
 		end
 	end
-	
+
 	path '/commands/{id}/users/{id}/edit' do
 		put 'Update User' do
 			tags 'Users'
@@ -241,11 +265,14 @@ RSpec.describe 'api/my_controler', type: :request do
 				properties: {
 					name: { type: :string },
 					phone: { type: :string },
-					male: { type: :string }	
+					male: { type: :string }
 				},
 				required: [ 'name', 'phone', 'male' ]
 
 				let(:id) { User.update(name: 'foo', phone: '1234567', male: 'm').id }
+				run_test!
+			end
+			response '401' , 'UnauthorizedError' do
 				run_test!
 			end
 			response '404', 'user not found' do
@@ -275,6 +302,9 @@ RSpec.describe 'api/my_controler', type: :request do
 				let(:id) { User.new(name: 'foo', phone: '1234567', male: 'm').id }
 				run_test!
 			end
+			response '401' , 'UnauthorizedError' do
+				run_test!
+			end
 			response '404', 'user not found' do
 				let(:id) { 'invalid' }
 				run_test!
@@ -288,7 +318,9 @@ RSpec.describe 'api/my_controler', type: :request do
 			tags 'Users'
 			produces 'application/json', 'application/xml'
 			parameter name: :id, in: :path, type: :string
-			
+			response '401' , 'UnauthorizedError' do
+				run_test!
+			end
 			response '404', 'user not found' do
 				let(:id) { 'invalid' }
 				run_test!
@@ -299,7 +331,7 @@ RSpec.describe 'api/my_controler', type: :request do
 			end
 		end
 	end
-	
+
 	path '/users/{name}' do
 		get 'Get user by name' do
 			tags 'Users'
@@ -317,6 +349,9 @@ RSpec.describe 'api/my_controler', type: :request do
 				let(:id) { User.new(name: 'foo', phone: '1234567', male: 'm').id }
 				run_test!
 			end
+			response '401' , 'UnauthorizedError' do
+				run_test!
+			end
 			response '404', 'user not found' do
 				let(:id) { 'invalid' }
 				run_test!
@@ -327,5 +362,5 @@ RSpec.describe 'api/my_controler', type: :request do
 			end
 		end
 	end
-	 
+
 end

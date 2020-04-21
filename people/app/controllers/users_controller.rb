@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+   before_action :authenticate_user!
+  # http_basic_authenticate_with name before_filter :authenticate_user!
+
   def index
        @user = User.paginate(page: params[:page], per_page: 12)
   end

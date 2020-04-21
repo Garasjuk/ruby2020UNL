@@ -1,4 +1,5 @@
 class Command < ApplicationRecord
+	# before_action :authenticate_user!
 	has_many :user
 	validates :name, uniqueness: true
 
@@ -8,5 +9,5 @@ class Command < ApplicationRecord
 		command
 	end
 
-  
+
 end

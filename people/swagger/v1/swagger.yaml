@@ -1,0 +1,433 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/Users":
+    post:
+      summary: Add user
+      tags:
+      - Users
+      parameters: []
+      responses:
+        '201':
+          description: user created
+          content: {}
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '422':
+          description: invalid request
+          content: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                password:
+                  type: string
+              required:
+              - name
+              - password
+    get:
+      summary: All user
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: user found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  type:
+                    type: string
+                required:
+                - id
+                - name
+                - type
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  type:
+                    type: string
+                required:
+                - id
+                - name
+                - type
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: user not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+  "/users/{id}":
+    get:
+      summary: Get user by id
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: user found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  type:
+                    type: string
+                required:
+                - id
+                - name
+                - type
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  type:
+                    type: string
+                required:
+                - id
+                - name
+                - type
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: user not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+    delete:
+      summary: Delete user
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: user not found
+          content: {}
+        '400':
+          description: Invalid ID
+          content: {}
+  "/users/new":
+    put:
+      summary: Update a user
+      tags:
+      - Users
+      parameters: []
+      responses:
+        '201':
+          description: user update
+          content: {}
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: User not found
+          content: {}
+        '422':
+          description: invalid request
+          content: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                type:
+                  type: string
+              required:
+              - name
+              - type
+  "/friend":
+    get:
+      summary: Get all friend
+      tags:
+      - Friend
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: user found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  type:
+                    type: string
+                required:
+                - name
+                - type
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: user not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+  "/friend/{id}":
+    put:
+      summary: Update a friend
+      tags:
+      - Friend
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: friend found
+          content: {}
+        '201':
+          description: friend update
+          content: {}
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: Friend not found
+          content: {}
+        '422':
+          description: invalid request
+          content: {}
+    delete:
+      summary: Delete friend
+      tags:
+      - Friend
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: friend not found
+          content: {}
+        '400':
+          description: Invalid ID
+          content: {}
+  "/neutrality":
+    get:
+      summary: Get all neutrality
+      tags:
+      - Neutrality
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: neutrality found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  type:
+                    type: string
+                required:
+                - name
+                - type
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: neutrality not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+  "/neutrality/{id}":
+    put:
+      summary: Update a neutrality
+      tags:
+      - Neutrality
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: neutrality found
+          content: {}
+        '201':
+          description: neutrality update
+          content: {}
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: neutrality not found
+          content: {}
+        '422':
+          description: invalid request
+          content: {}
+    delete:
+      summary: Delete friend
+      tags:
+      - Neutrality
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: neutrality not found
+          content: {}
+        '400':
+          description: Invalid ID
+          content: {}
+  "/enemy":
+    get:
+      summary: Get all enemy
+      tags:
+      - Enemy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: enemy found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  type:
+                    type: string
+                required:
+                - name
+                - type
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: enemy not found
+          content: {}
+        '406':
+          description: unsupported accept header
+          content: {}
+  "/enemy/{id}":
+    put:
+      summary: Update a enemy
+      tags:
+      - Enemy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: enemy found
+          content: {}
+        '201':
+          description: enemy update
+          content: {}
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: enemy not found
+          content: {}
+        '422':
+          description: invalid request
+          content: {}
+    delete:
+      summary: Delete friend
+      tags:
+      - Enemy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '401':
+          description: UnauthorizedError
+          content: {}
+        '404':
+          description: enemy not found
+          content: {}
+        '400':
+          description: Invalid ID
+          content: {}
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com

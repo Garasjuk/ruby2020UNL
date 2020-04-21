@@ -9379,3 +9379,1914 @@ Processing by CommandsController#index as HTML
 Completed 200 OK in 89ms (Views: 58.6ms | ActiveRecord: 29.6ms | Allocations: 15950)
 
 
+Started GET "/" for ::1 at 2020-04-19 21:08:18 +0300
+  [1m[35m (98.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (150.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (159.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (29.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 636.2ms | Allocations: 12724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21190ms (Views: 20780.8ms | ActiveRecord: 334.4ms | Allocations: 1581107)
+
+
+  [1m[35m (108.7ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (79.8ms)[0m  [1m[34mSELECT GET_LOCK('4052481305532234750', 0)[0m
+  [1m[35m (17.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddPasswordToUser (20200419182230)
+  [1m[35m (6285.9ms)[0m  [1m[35mALTER TABLE `users` ADD `password` varchar(255)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (131.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200419182230')[0m
+  [1m[35m (35.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (89.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('4052481305532234750')[0m
+  [1m[35m (53.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (68.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (455.1ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (122.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (119.1ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (129.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Create (317.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('ibanez9019h8', '7804516', 'm', 1, '2020-04-19 18:27:44.470996', '2020-04-19 18:27:44.470996', '12345')[0m
+  [1m[35m (228.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (1.0ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Create (39.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('tympboyyk', '1006717', 'm', 1, '2020-04-19 18:27:45.031028', '2020-04-19 18:27:45.031028', '12345')[0m
+  [1m[35m (277.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Create (43.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Walzradaz', '7939994', 'm', 1, '2020-04-19 18:27:45.360047', '2020-04-19 18:27:45.360047', '12345')[0m
+  [1m[35m (405.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Create (63.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('abrandeseh', '5487056', 'w', 1, '2020-04-19 18:27:45.821073', '2020-04-19 18:27:45.821073', '12345')[0m
+  [1m[35m (243.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Create (526.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('muradyann0', '7041031', 'w', 1, '2020-04-19 18:27:46.140092', '2020-04-19 18:27:46.140092', '12345')[0m
+  [1m[35m (270.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Create (56.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('YBHL1YAbe', '1320912', 'w', 2, '2020-04-19 18:27:46.949138', '2020-04-19 18:27:46.949138', '12345')[0m
+  [1m[35m (208.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Create (128.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('brandnewstarts4', '1166503', 'm', 2, '2020-04-19 18:27:47.226154', '2020-04-19 18:27:47.226154', '12345')[0m
+  [1m[35m (265.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Create (90.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('dolskanp', '8737320', 'w', 2, '2020-04-19 18:27:47.632177', '2020-04-19 18:27:47.632177', '12345')[0m
+  [1m[35m (204.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Create (82.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('cdetorewu', '3382404', 'w', 2, '2020-04-19 18:27:47.939194', '2020-04-19 18:27:47.939194', '12345')[0m
+  [1m[35m (228.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Create (21.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('jaiyikendrad5', '5554660', 'm', 1, '2020-04-19 18:27:48.262213', '2020-04-19 18:27:48.262213', '12345')[0m
+  [1m[35m (117.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Create (4.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('trosnodc1', '9319181', 'm', 1, '2020-04-19 18:27:48.412221', '2020-04-19 18:27:48.412221', '12345')[0m
+  [1m[35m (141.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('dadcotp', '3835062', 'm', 2, '2020-04-19 18:27:48.568230', '2020-04-19 18:27:48.568230', '12345')[0m
+  [1m[35m (204.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (1.0ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 3 LIMIT 1[0m
+  [1m[36mUser Create (22.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('problemuja', '1629174', 'm', 3, '2020-04-19 18:27:48.788243', '2020-04-19 18:27:48.788243', '12345')[0m
+  [1m[35m (149.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 3 LIMIT 1[0m
+  [1m[36mUser Create (138.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('samu19850j', '9439360', 'w', 3, '2020-04-19 18:27:48.971253', '2020-04-19 18:27:48.971253', '12345')[0m
+  [1m[35m (215.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 3 LIMIT 1[0m
+  [1m[36mUser Create (95.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('slonovaxl', '7237519', 'w', 3, '2020-04-19 18:27:49.337274', '2020-04-19 18:27:49.337274', '12345')[0m
+  [1m[35m (155.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 3 LIMIT 1[0m
+  [1m[36mUser Create (154.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('guggath', '5134296', 'm', 3, '2020-04-19 18:27:49.601290', '2020-04-19 18:27:49.601290', '12345')[0m
+  [1m[35m (103.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 4 LIMIT 1[0m
+  [1m[36mUser Create (129.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('huchomozazi', '3435267', 'w', 4, '2020-04-19 18:27:49.870305', '2020-04-19 18:27:49.870305', '12345')[0m
+  [1m[35m (271.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 4 LIMIT 1[0m
+  [1m[36mUser Create (90.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Hatalukuvk', '2007620', 'm', 4, '2020-04-19 18:27:50.284329', '2020-04-19 18:27:50.284329', '12345')[0m
+  [1m[35m (167.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 4 LIMIT 1[0m
+  [1m[36mUser Create (95.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Andromarixv', '1251663', 'w', 4, '2020-04-19 18:27:50.555344', '2020-04-19 18:27:50.555344', '12345')[0m
+  [1m[35m (127.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 4 LIMIT 1[0m
+  [1m[36mUser Create (8.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('stinky91101em', '2480712', 'm', 4, '2020-04-19 18:27:50.790358', '2020-04-19 18:27:50.790358', '12345')[0m
+  [1m[35m (208.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.4ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 4 LIMIT 1[0m
+  [1m[36mUser Create (150.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('sostae3', '8737926', 'w', 4, '2020-04-19 18:27:51.015370', '2020-04-19 18:27:51.015370', '12345')[0m
+  [1m[35m (115.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 4 LIMIT 1[0m
+  [1m[36mUser Create (127.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('helitydd87', '7503617', 'w', 4, '2020-04-19 18:27:51.291386', '2020-04-19 18:27:51.291386', '12345')[0m
+  [1m[35m (153.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.6ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Create (84.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Paruzain', '3950098', 'm', 5, '2020-04-19 18:27:51.583403', '2020-04-19 18:27:51.583403', '12345')[0m
+  [1m[35m (207.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Create (98.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('rosedunjourr9', '9161933', 'w', 5, '2020-04-19 18:27:51.887420', '2020-04-19 18:27:51.887420', '12345')[0m
+  [1m[35m (167.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Create (118.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('borbaigh3a', '5162802', 'w', 5, '2020-04-19 18:27:52.164436', '2020-04-19 18:27:52.164436', '12345')[0m
+  [1m[35m (260.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Create (107.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('michigani7v', '3719904', 'm', 5, '2020-04-19 18:27:52.556459', '2020-04-19 18:27:52.556459', '12345')[0m
+  [1m[35m (266.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Create (36.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('sdes2zjw', '3789594', 'm', 5, '2020-04-19 18:27:52.942481', '2020-04-19 18:27:52.942481', '12345')[0m
+  [1m[35m (167.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Create (32.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Buiglan', '6836242', 'm', 5, '2020-04-19 18:27:53.159493', '2020-04-19 18:27:53.159493', '12345')[0m
+  [1m[35m (177.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Create (61.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Issuefattsh', '2507877', 'm', 5, '2020-04-19 18:27:53.381506', '2020-04-19 18:27:53.381506', '12345')[0m
+  [1m[35m (314.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Create (127.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('blacklavelef', '7155413', 'm', 5, '2020-04-19 18:27:53.770528', '2020-04-19 18:27:53.770528', '12345')[0m
+  [1m[35m (245.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (1.0ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('doppemeulnh', '2509172', 'm', 5, '2020-04-19 18:27:54.161550', '2020-04-19 18:27:54.161550', '12345')[0m
+  [1m[35m (217.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Create (172.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Colauttipa', '5826976', 'w', 6, '2020-04-19 18:27:54.393564', '2020-04-19 18:27:54.393564', '12345')[0m
+  [1m[35m (112.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Create (123.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Scediakekuh', '2217811', 'w', 6, '2020-04-19 18:27:54.690581', '2020-04-19 18:27:54.690581', '12345')[0m
+  [1m[35m (259.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Create (55.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Wrabeurodadesy9', '2656706', 'w', 6, '2020-04-19 18:27:55.085603', '2020-04-19 18:27:55.085603', '12345')[0m
+  [1m[35m (198.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Create (102.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('zbujenegax8', '3771243', 'm', 6, '2020-04-19 18:27:55.351618', '2020-04-19 18:27:55.351618', '12345')[0m
+  [1m[35m (100.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Create (80.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('vuurstaalkc', '9273494', 'w', 6, '2020-04-19 18:27:55.565631', '2020-04-19 18:27:55.565631', '12345')[0m
+  [1m[35m (111.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Create (64.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('twetaencumn4b', '4198243', 'w', 6, '2020-04-19 18:27:55.769642', '2020-04-19 18:27:55.769642', '12345')[0m
+  [1m[35m (405.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Create (89.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('mollstemt6w', '2372539', 'm', 6, '2020-04-19 18:27:56.434680', '2020-04-19 18:27:56.434680', '12345')[0m
+  [1m[35m (193.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 7 LIMIT 1[0m
+  [1m[36mUser Create (38.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('teiscegu', '2824641', 'm', 7, '2020-04-19 18:27:56.729697', '2020-04-19 18:27:56.729697', '12345')[0m
+  [1m[35m (220.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 7 LIMIT 1[0m
+  [1m[36mUser Create (79.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('fyddont04', '276575', 'm', 7, '2020-04-19 18:27:57.000713', '2020-04-19 18:27:57.000713', '12345')[0m
+  [1m[35m (83.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 7 LIMIT 1[0m
+  [1m[36mUser Create (109.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('desjacis9s', '9569795', 'm', 7, '2020-04-19 18:27:57.175723', '2020-04-19 18:27:57.175723', '12345')[0m
+  [1m[35m (82.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 7 LIMIT 1[0m
+  [1m[36mUser Create (99.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('dormesli', '8793964', 'w', 7, '2020-04-19 18:27:57.380734', '2020-04-19 18:27:57.380734', '12345')[0m
+  [1m[35m (127.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 7 LIMIT 1[0m
+  [1m[36mUser Create (238.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('adozenrozess2', '7304311', 'w', 7, '2020-04-19 18:27:57.619748', '2020-04-19 18:27:57.619748', '12345')[0m
+  [1m[35m (93.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 7 LIMIT 1[0m
+  [1m[36mUser Create (7.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Barzanav7', '7286031', 'm', 7, '2020-04-19 18:27:57.963768', '2020-04-19 18:27:57.963768', '12345')[0m
+  [1m[35m (185.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 8 LIMIT 1[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('damunterx2', '482141', 'w', 8, '2020-04-19 18:27:58.167779', '2020-04-19 18:27:58.167779', '12345')[0m
+  [1m[35m (216.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 8 LIMIT 1[0m
+  [1m[36mUser Create (48.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('makacheroti', '6757486', 'm', 8, '2020-04-19 18:27:58.397793', '2020-04-19 18:27:58.397793', '12345')[0m
+  [1m[35m (174.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 8 LIMIT 1[0m
+  [1m[36mUser Create (133.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('peglezt4', '6782400', 'w', 8, '2020-04-19 18:27:58.633806', '2020-04-19 18:27:58.633806', '12345')[0m
+  [1m[35m (183.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 8 LIMIT 1[0m
+  [1m[36mUser Create (128.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('istragev6', '2081919', 'm', 8, '2020-04-19 18:27:58.962825', '2020-04-19 18:27:58.962825', '12345')[0m
+  [1m[35m (49.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 8 LIMIT 1[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('minderlypq', '3145719', 'w', 8, '2020-04-19 18:27:59.152836', '2020-04-19 18:27:59.152836', '12345')[0m
+  [1m[35m (180.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 8 LIMIT 1[0m
+  [1m[36mUser Create (56.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Woncorymmeddyb3', '6815382', 'w', 8, '2020-04-19 18:27:59.342847', '2020-04-19 18:27:59.342847', '12345')[0m
+  [1m[35m (162.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 8 LIMIT 1[0m
+  [1m[36mUser Create (39.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Zandonadi5d', '2401508', 'm', 8, '2020-04-19 18:27:59.571860', '2020-04-19 18:27:59.571860', '12345')[0m
+  [1m[35m (183.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Create (8.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('trpeowy', '9400714', 'w', 9, '2020-04-19 18:27:59.807873', '2020-04-19 18:27:59.807873', '12345')[0m
+  [1m[35m (201.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Create (235.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Hinternahi1', '4998568', 'w', 9, '2020-04-19 18:28:00.030886', '2020-04-19 18:28:00.030886', '12345')[0m
+  [1m[35m (57.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Korselettyk', '5135365', 'm', 9, '2020-04-19 18:28:00.335903', '2020-04-19 18:28:00.335903', '12345')[0m
+  [1m[35m (22.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Create (102.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('jennxisxrads9', '5163902', 'm', 9, '2020-04-19 18:28:00.373906', '2020-04-19 18:28:00.373906', '12345')[0m
+  [1m[35m (62.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Create (81.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('FiepsyFerpent19', '2378657', 'm', 9, '2020-04-19 18:28:00.550916', '2020-04-19 18:28:00.550916', '12345')[0m
+  [1m[35m (204.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('onenonlyzen64', '2181593', 'm', 9, '2020-04-19 18:28:00.848933', '2020-04-19 18:28:00.848933', '12345')[0m
+  [1m[35m (104.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Create (72.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('sflays13oq', '9549945', 'm', 9, '2020-04-19 18:28:00.967940', '2020-04-19 18:28:00.967940', '12345')[0m
+  [1m[35m (237.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 10 LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('penwynner1c', '5321547', 'm', 10, '2020-04-19 18:28:01.288958', '2020-04-19 18:28:01.288958', '12345')[0m
+  [1m[35m (89.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 10 LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Nordkapiv', '2931039', 'w', 10, '2020-04-19 18:28:01.391964', '2020-04-19 18:28:01.391964', '12345')[0m
+  [1m[35m (223.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 10 LIMIT 1[0m
+  [1m[36mUser Create (56.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('lance200631', '8379112', 'w', 10, '2020-04-19 18:28:01.627977', '2020-04-19 18:28:01.627977', '12345')[0m
+  [1m[35m (120.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 10 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('starfish2b', '5408929', 'w', 10, '2020-04-19 18:28:01.816988', '2020-04-19 18:28:01.816988', '12345')[0m
+  [1m[35m (145.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 10 LIMIT 1[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('stomacso', '2581764', 'm', 10, '2020-04-19 18:28:01.975997', '2020-04-19 18:28:01.975997', '12345')[0m
+  [1m[35m (164.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 10 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('dilafilali', '6553279', 'w', 10, '2020-04-19 18:28:02.154007', '2020-04-19 18:28:02.154007', '12345')[0m
+  [1m[35m (249.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 10 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('hunau8u', '278717', 'w', 10, '2020-04-19 18:28:02.416022', '2020-04-19 18:28:02.416022', '12345')[0m
+  [1m[35m (156.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 10 LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Prekdeecypeoo', '9285432', 'm', 10, '2020-04-19 18:28:02.587032', '2020-04-19 18:28:02.587032', '12345')[0m
+  [1m[35m (123.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 10 LIMIT 1[0m
+  [1m[36mUser Create (110.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Galatiana2b', '8853398', 'm', 10, '2020-04-19 18:28:02.723040', '2020-04-19 18:28:02.723040', '12345')[0m
+  [1m[35m (162.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 10 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Tauchereiuq', '5512429', 'm', 10, '2020-04-19 18:28:03.009056', '2020-04-19 18:28:03.009056', '12345')[0m
+  [1m[35m (85.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 10 LIMIT 1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('atapits0s ', '819736', 'm', 10, '2020-04-19 18:28:03.108062', '2020-04-19 18:28:03.108062', '12345')[0m
+  [1m[35m (143.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 10 LIMIT 1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('aeqybzkmvh9', '8306081', 'w', 10, '2020-04-19 18:28:03.264071', '2020-04-19 18:28:03.264071', '12345')[0m
+  [1m[35m (80.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 11 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('bambino1998gy', '60500', 'w', 11, '2020-04-19 18:28:03.359076', '2020-04-19 18:28:03.359076', '12345')[0m
+  [1m[35m (72.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 11 LIMIT 1[0m
+  [1m[36mUser Create (70.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('nikooru89ns', '2649520', 'm', 11, '2020-04-19 18:28:03.445081', '2020-04-19 18:28:03.445081', '12345')[0m
+  [1m[35m (84.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 11 LIMIT 1[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Ardinopc', '2988608', 'w', 11, '2020-04-19 18:28:03.612091', '2020-04-19 18:28:03.612091', '12345')[0m
+  [1m[35m (106.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 11 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Gelletti2g', '5225120', 'm', 11, '2020-04-19 18:28:03.732098', '2020-04-19 18:28:03.732098', '12345')[0m
+  [1m[35m (187.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 11 LIMIT 1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Kubhahela10', '9132285', 'w', 11, '2020-04-19 18:28:03.929109', '2020-04-19 18:28:03.929109', '12345')[0m
+  [1m[35m (138.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 11 LIMIT 1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('l8nightcattyvg', '6054231', 'm', 11, '2020-04-19 18:28:04.080118', '2020-04-19 18:28:04.080118', '12345')[0m
+  [1m[35m (95.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 11 LIMIT 1[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('hipurowy6h', '1700112', 'w', 11, '2020-04-19 18:28:04.189124', '2020-04-19 18:28:04.189124', '12345')[0m
+  [1m[35m (94.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 11 LIMIT 1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('lilikutaap', '3529421', 'w', 11, '2020-04-19 18:28:04.297130', '2020-04-19 18:28:04.297130', '12345')[0m
+  [1m[35m (120.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 11 LIMIT 1[0m
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('solmartingr', '9040635', 'm', 11, '2020-04-19 18:28:04.433138', '2020-04-19 18:28:04.433138', '12345')[0m
+  [1m[35m (207.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 11 LIMIT 1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('ovenpaalev', '7035095', 'w', 11, '2020-04-19 18:28:04.653150', '2020-04-19 18:28:04.653150', '12345')[0m
+  [1m[35m (143.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 11 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('xxurbanerdxxb7', '6147499', 'w', 11, '2020-04-19 18:28:04.810159', '2020-04-19 18:28:04.810159', '12345')[0m
+  [1m[35m (221.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 11 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('carduzo1g', '1474277', 'm', 11, '2020-04-19 18:28:05.045173', '2020-04-19 18:28:05.045173', '12345')[0m
+  [1m[35m (88.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 12 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('rgomezgalindoua', '9613306', 'm', 12, '2020-04-19 18:28:05.146179', '2020-04-19 18:28:05.146179', '12345')[0m
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 12 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('asincronosja', '4193707', 'm', 12, '2020-04-19 18:28:05.180181', '2020-04-19 18:28:05.180181', '12345')[0m
+  [1m[35m (126.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 12 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('situirali2e', '6267294', 'm', 12, '2020-04-19 18:28:05.319189', '2020-04-19 18:28:05.319189', '12345')[0m
+  [1m[35m (54.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 12 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Juzais', '121072', 'm', 12, '2020-04-19 18:28:05.386192', '2020-04-19 18:28:05.386192', '12345')[0m
+  [1m[35m (69.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 12 LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('mulcta1o', '1761170', 'm', 12, '2020-04-19 18:28:05.468197', '2020-04-19 18:28:05.468197', '12345')[0m
+  [1m[35m (165.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 12 LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('vagappevea7', '9163678', 'w', 12, '2020-04-19 18:28:05.646207', '2020-04-19 18:28:05.646207', '12345')[0m
+  [1m[35m (106.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 12 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('poblem7r', '7637538', 'w', 12, '2020-04-19 18:28:05.766214', '2020-04-19 18:28:05.766214', '12345')[0m
+  [1m[35m (184.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 12 LIMIT 1[0m
+  [1m[36mUser Create (39.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Prendonizo', '5744810', 'w', 12, '2020-04-19 18:28:05.963225', '2020-04-19 18:28:05.963225', '12345')[0m
+  [1m[35m (158.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 12 LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Coubsweessye3', '6759665', 'm', 12, '2020-04-19 18:28:06.173237', '2020-04-19 18:28:06.173237', '12345')[0m
+  [1m[35m (177.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 12 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('Stitteekemoa2', '2630382', 'w', 12, '2020-04-19 18:28:06.363248', '2020-04-19 18:28:06.363248', '12345')[0m
+  [1m[35m (193.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 12 LIMIT 1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('botkanker9g', '5777130', 'w', 12, '2020-04-19 18:28:06.569260', '2020-04-19 18:28:06.569260', '12345')[0m
+  [1m[35m (100.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 12 LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('ddaethan', '1482057', 'm', 12, '2020-04-19 18:28:06.683267', '2020-04-19 18:28:06.683267', '12345')[0m
+  [1m[35m (149.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 13 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('OmiseeDew66', '2283345', 'm', 13, '2020-04-19 18:28:06.845276', '2020-04-19 18:28:06.845276', '12345')[0m
+  [1m[35m (274.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 13 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('bloguotin4q', '2453810', 'm', 13, '2020-04-19 18:28:07.132292', '2020-04-19 18:28:07.132292', '12345')[0m
+  [1m[35m (74.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 13 LIMIT 1[0m
+  [1m[36mUser Create (175.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('analemalk', '2462490', 'm', 13, '2020-04-19 18:28:07.220297', '2020-04-19 18:28:07.220297', '12345')[0m
+  [1m[35m (157.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 13 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('adlemaisbx', '4364582', 'w', 13, '2020-04-19 18:28:07.565317', '2020-04-19 18:28:07.565317', '12345')[0m
+  [1m[35m (23.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 13 LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('aprimeishiu', '5131265', 'w', 13, '2020-04-19 18:28:07.602319', '2020-04-19 18:28:07.602319', '12345')[0m
+  [1m[35m (195.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 13 LIMIT 1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('sebaceegv', '5476602', 'm', 13, '2020-04-19 18:28:07.811331', '2020-04-19 18:28:07.811331', '12345')[0m
+  [1m[35m (97.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-04-19 21:29:07 +0300
+  [1m[35m (23.5ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (50.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (10.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 341.0ms | Allocations: 12724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9775ms (Views: 9539.4ms | ActiveRecord: 184.2ms | Allocations: 1581017)
+
+
+Started GET "/" for ::1 at 2020-04-19 21:30:58 +0300
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 26.4ms | Allocations: 7920)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 81.9ms | ActiveRecord: 9.3ms | Allocations: 22619)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 21:31:00 +0300
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.4ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3610)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 1.4ms | Allocations: 16060)
+
+
+Started GET "/commands/new" for ::1 at 2020-04-19 21:31:02 +0300
+Processing by CommandsController#new as HTML
+  Rendering commands/new.html.erb within layouts/application
+  Rendered commands/_form.html.erb (Duration: 51.4ms | Allocations: 2106)
+  Rendered commands/new.html.erb within layouts/application (Duration: 53.5ms | Allocations: 2427)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 106.7ms | ActiveRecord: 0.0ms | Allocations: 14964)
+
+
+Started GET "/users" for ::1 at 2020-04-19 21:31:03 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (35.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 72.4ms | Allocations: 11021)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 140ms (Views: 82.3ms | ActiveRecord: 51.5ms | Allocations: 24634)
+
+
+Started GET "/users/new" for ::1 at 2020-04-19 21:31:05 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mCommand Load (9.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands`[0m
+  ↳ app/views/users/_form.html.erb:32
+  Rendered users/_form.html.erb (Duration: 49.7ms | Allocations: 3698)
+  Rendered users/new.html.erb within layouts/application (Duration: 51.4ms | Allocations: 4014)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 97.6ms | ActiveRecord: 9.5ms | Allocations: 16547)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 21:31:07 +0300
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 3605)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 64.5ms | ActiveRecord: 7.9ms | Allocations: 16049)
+
+
+Started GET "/users/new" for ::1 at 2020-04-19 21:31:10 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands`[0m
+  ↳ app/views/users/_form.html.erb:32
+  Rendered users/_form.html.erb (Duration: 5.9ms | Allocations: 2695)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2771)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 68.6ms | ActiveRecord: 0.5ms | Allocations: 15153)
+
+
+Started POST "/users" for ::1 at 2020-04-19 21:31:20 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"sdPWTP/9c8VcwIl27mwcZ41shhz7O4CdfRKdUmjB750xui35ueV1vl+y1aLsBui+mXclkvVUlEEpOmiUjuvQZw==", "user"=>{"name"=>"еукеукекуе", "phone"=>"4342342", "male"=>"m", "command_id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:26:in `create'
+  [1m[36mCommand Load (0.4ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE `commands`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:26:in `create'
+  [1m[36mUser Create (18.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `phone`, `male`, `command_id`, `created_at`, `updated_at`, `password`) VALUES ('еукеукекуе', '4342342', 'm', 1, '2020-04-19 18:31:20.141332', '2020-04-19 18:31:20.141332', '123456')[0m
+  ↳ app/controllers/users_controller.rb:26:in `create'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:26:in `create'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 73ms (ActiveRecord: 20.5ms | Allocations: 7980)
+
+
+Started GET "/users" for ::1 at 2020-04-19 21:31:20 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 5207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 74.6ms | ActiveRecord: 2.8ms | Allocations: 17639)
+
+
+Started GET "/users" for ::1 at 2020-04-19 22:13:33 +0300
+  [1m[35m (835.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (165.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 191.8ms | Allocations: 11607)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3576ms (Views: 3402.6ms | ActiveRecord: 166.3ms | Allocations: 34231)
+
+
+Started GET "/log_in" for ::1 at 2020-04-19 22:13:44 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 28.4ms | Allocations: 2254)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms | Allocations: 3470)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    4:   <section class="team-head">
+    5:     <div class="container">
+    6: 
+    7:       <% if @user.errors.any?  %>
+    8:          <div class="alert alert-danger">
+    9:              <h2>
+   10:                <%= pluralize(@user.errors.count, "error") %>
+  
+app/views/sessions/new.html.erb:7
+Started GET "/log_in" for ::1 at 2020-04-19 22:14:35 +0300
+  [1m[35m (79.5ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (87.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2516)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms | Allocations: 4920)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    4:   <section class="team-head">
+    5:     <div class="container">
+    6: 
+    7:       <% if @user.errors.any?  %>
+    8:          <div class="alert alert-danger">
+    9:              <h2>
+   10:                <%= pluralize(@user.errors.count, "error") %>
+  
+app/views/sessions/new.html.erb:7
+Started GET "/log_in" for ::1 at 2020-04-19 22:14:51 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 584)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7750ms (Views: 7748.4ms | ActiveRecord: 0.0ms | Allocations: 1572437)
+
+
+Started GET "/users" for ::1 at 2020-04-19 22:15:02 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (14.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 225.1ms | Allocations: 16268)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 320ms (Views: 128.1ms | ActiveRecord: 184.0ms | Allocations: 31836)
+
+
+Started GET "/users/new" for ::1 at 2020-04-19 22:15:04 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mCommand Load (1.1ms)[0m  [1m[34mSELECT `commands`.* FROM `commands`[0m
+  ↳ app/views/users/_form.html.erb:32
+  Rendered users/_form.html.erb (Duration: 29.0ms | Allocations: 7865)
+  Rendered users/new.html.erb within layouts/application (Duration: 31.3ms | Allocations: 8187)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 82.8ms | ActiveRecord: 3.6ms | Allocations: 23710)
+
+
+Started GET "/users" for ::1 at 2020-04-19 22:15:05 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (27.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 37.3ms | Allocations: 5208)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 72.0ms | ActiveRecord: 27.8ms | Allocations: 19277)
+
+
+Started GET "/log_in" for ::1 at 2020-04-19 22:15:07 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 296)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.0ms | Allocations: 14279)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:15:08 +0300
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (52.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 60.1ms | Allocations: 4023)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 68.5ms | ActiveRecord: 52.7ms | Allocations: 18775)
+
+
+Started GET "/log_in" for ::1 at 2020-04-19 22:15:10 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.0ms | Allocations: 14268)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:17:06 +0300
+Processing by CommandsController#index as HTML
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms | Allocations: 4263)
+
+
+  
+NoMethodError (undefined method `before_action' for #<Class:0x000000000f91ba68>
+Did you mean?  before_commit):
+  
+app/models/command.rb:2:in `<class:Command>'
+app/models/command.rb:1:in `<top (required)>'
+app/controllers/commands_controller.rb:5:in `index'
+Started GET "/commands" for ::1 at 2020-04-19 22:18:03 +0300
+Processing by CommandsController#index as HTML
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 4255)
+
+
+  
+NoMethodError (undefined method `before_action' for #<Class:0x000000000ebd7208>
+Did you mean?  before_commit):
+  
+app/models/command.rb:2:in `<class:Command>'
+app/models/command.rb:1:in `<top (required)>'
+app/controllers/commands_controller.rb:5:in `index'
+Started GET "/log_in" for ::1 at 2020-04-19 22:18:11 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 296)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 66.3ms | ActiveRecord: 0.0ms | Allocations: 14440)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:18:13 +0300
+Processing by CommandsController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2897)
+
+
+  
+NoMethodError (undefined method `search' for #<Class:0x000000000ebd7208>):
+  
+app/controllers/commands_controller.rb:5:in `index'
+Started GET "/log_in" for ::1 at 2020-04-19 22:18:17 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.0ms | Allocations: 14258)
+
+
+Started GET "/log_in" for ::1 at 2020-04-19 22:19:00 +0300
+  [1m[35m (98.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7414ms (Views: 7405.8ms | ActiveRecord: 0.0ms | Allocations: 1569121)
+
+
+Started GET "/users" for ::1 at 2020-04-19 22:19:09 +0300
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms | Allocations: 4546)
+
+
+  
+NoMethodError (undefined method `before_action' for #<Class:0x000000000f3c2bc0>
+Did you mean?  before_commit):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:5:in `index'
+Started GET "/users" for ::1 at 2020-04-19 22:20:44 +0300
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2908)
+
+
+  
+NoMethodError (undefined method `search' for #<Class:0x000000000f3c2bc0>):
+  
+app/controllers/users_controller.rb:5:in `index'
+Started GET "/log_in" for ::1 at 2020-04-19 22:20:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 291)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 60.4ms | ActiveRecord: 0.0ms | Allocations: 14279)
+
+
+Started GET "/log_in" for ::1 at 2020-04-19 22:20:52 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 57.4ms | ActiveRecord: 0.0ms | Allocations: 14261)
+
+
+Started GET "/" for ::1 at 2020-04-19 22:20:57 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 62.3ms | ActiveRecord: 0.0ms | Allocations: 14269)
+
+
+Started GET "/" for ::1 at 2020-04-19 22:24:55 +0300
+  [1m[35m (91.1ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (78.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7569ms (Views: 7561.9ms | ActiveRecord: 0.0ms | Allocations: 1569120)
+
+
+Started GET "/log_in" for ::1 at 2020-04-19 22:25:06 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 63.6ms | ActiveRecord: 0.0ms | Allocations: 14272)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:25:07 +0300
+Processing by CommandsController#index as HTML
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 4402)
+
+
+  
+NoMethodError (undefined method `before_action' for #<Class:0x000000000f00b1d0>
+Did you mean?  before_commit):
+  
+app/models/command.rb:2:in `<class:Command>'
+app/models/command.rb:1:in `<top (required)>'
+app/controllers/commands_controller.rb:5:in `index'
+Started GET "/commands" for ::1 at 2020-04-19 22:27:28 +0300
+Processing by CommandsController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 538)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 22:27:29 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 299)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 77.8ms | ActiveRecord: 0.0ms | Allocations: 14475)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:27:30 +0300
+Processing by CommandsController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 463)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 22:27:30 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 64.2ms | ActiveRecord: 0.0ms | Allocations: 14277)
+
+
+Started GET "/commands/new" for ::1 at 2020-04-19 22:27:31 +0300
+Processing by CommandsController#new as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 461)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 22:27:32 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 61.3ms | ActiveRecord: 0.0ms | Allocations: 14277)
+
+
+Started GET "/users" for ::1 at 2020-04-19 22:27:32 +0300
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 513)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 22:27:32 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms | Allocations: 14288)
+
+
+Started GET "/users/new" for ::1 at 2020-04-19 22:27:33 +0300
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 462)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 22:27:33 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.0ms | Allocations: 14284)
+
+
+Started POST "/sessions" for ::1 at 2020-04-19 22:28:08 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"kYTrsJy/F1xLs2lIHnwW38cHVhxBFvENHVvUftPZor5+F7OVyYoiUvEw7mPh8hXIlXRlm03ZoQ+7Cl/1Czbhww==", "name"=>"dolskanp", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (20.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`name` = 'dolskanp' LIMIT 1[0m
+  ↳ app/models/user.rb:12:in `authenticate'
+Redirected to http://localhost:3000/
+Completed 302 Found in 106ms (ActiveRecord: 73.5ms | Allocations: 8357)
+
+
+Started GET "/" for ::1 at 2020-04-19 22:28:08 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 0.9ms | Allocations: 15045)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:28:14 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (27.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.6ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 55.7ms | Allocations: 12154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 136ms (Views: 87.0ms | ActiveRecord: 31.5ms | Allocations: 28894)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:28:47 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (30.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 48.3ms | Allocations: 7554)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 134ms (Views: 71.8ms | ActiveRecord: 43.0ms | Allocations: 29451)
+
+
+Started GET "/commands/new" for ::1 at 2020-04-19 22:28:48 +0300
+Processing by CommandsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/new.html.erb within layouts/application
+  Rendered commands/_form.html.erb (Duration: 12.7ms | Allocations: 2103)
+  Rendered commands/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 2421)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 71.4ms | ActiveRecord: 0.5ms | Allocations: 17203)
+
+
+Started GET "/users" for ::1 at 2020-04-19 22:28:49 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 5597)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 67.6ms | ActiveRecord: 3.7ms | Allocations: 21010)
+
+
+Started GET "/log_out" for ::1 at 2020-04-19 22:28:51 +0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 428)
+
+
+Started GET "/" for ::1 at 2020-04-19 22:28:51 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 74.6ms | ActiveRecord: 0.0ms | Allocations: 14463)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:28:53 +0300
+Processing by CommandsController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 464)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 22:28:53 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 56.8ms | ActiveRecord: 0.0ms | Allocations: 14278)
+
+
+Started GET "/commands/new" for ::1 at 2020-04-19 22:28:54 +0300
+Processing by CommandsController#new as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 454)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 22:28:54 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms | Allocations: 14272)
+
+
+Started POST "/sessions" for ::1 at 2020-04-19 22:29:00 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9sBW8ED94v5RvUAZ8qBvAxq9mVzTEkWdcTSHfNTuyGcZUw7VFcjX8Os+xzINLmwUSM6q29/dFZ/XZQz3DAGLGg==", "name"=>"dolskanp", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`name` = 'dolskanp' LIMIT 1[0m
+  ↳ app/models/user.rb:12:in `authenticate'
+Redirected to http://localhost:3000/commands
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms | Allocations: 1264)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:29:00 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 3622)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 69.4ms | ActiveRecord: 3.0ms | Allocations: 18323)
+
+
+Started GET "/commands/new" for ::1 at 2020-04-19 22:29:11 +0300
+Processing by CommandsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/new.html.erb within layouts/application
+  Rendered commands/_form.html.erb (Duration: 2.4ms | Allocations: 759)
+  Rendered commands/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 835)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 64.6ms | ActiveRecord: 1.2ms | Allocations: 15453)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:29:12 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (30.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 37.7ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 105ms (Views: 67.9ms | ActiveRecord: 31.5ms | Allocations: 18289)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:29:14 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (1.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 74.9ms | ActiveRecord: 3.2ms | Allocations: 18282)
+
+
+Started GET "/users" for ::1 at 2020-04-19 22:29:15 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 5203)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 79.0ms | ActiveRecord: 3.1ms | Allocations: 19884)
+
+
+Started GET "/users/new" for ::1 at 2020-04-19 22:29:16 +0300
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands`[0m
+  ↳ app/views/users/_form.html.erb:32
+  Rendered users/_form.html.erb (Duration: 14.2ms | Allocations: 3692)
+  Rendered users/new.html.erb within layouts/application (Duration: 16.9ms | Allocations: 4012)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 75.2ms | ActiveRecord: 1.0ms | Allocations: 18783)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:29:17 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (1.1ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 3622)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 74.7ms | ActiveRecord: 2.5ms | Allocations: 18319)
+
+
+Started GET "/users/new" for ::1 at 2020-04-19 22:29:18 +0300
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mCommand Load (0.6ms)[0m  [1m[34mSELECT `commands`.* FROM `commands`[0m
+  ↳ app/views/users/_form.html.erb:32
+  Rendered users/_form.html.erb (Duration: 5.0ms | Allocations: 2695)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2771)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 78.8ms | ActiveRecord: 1.2ms | Allocations: 17401)
+
+
+Started GET "/commands" for ::1 at 2020-04-19 22:29:19 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (1.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 76.2ms | ActiveRecord: 3.0ms | Allocations: 18289)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 14:41:08 +0300
+  [1m[35m (147.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (267.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (269.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (50.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 1623.0ms | Allocations: 3615)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6329ms (Views: 4537.8ms | ActiveRecord: 588.1ms | Allocations: 18302)
+
+
+Started GET "/users" for ::1 at 2020-04-20 14:41:20 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (29.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 489.1ms | Allocations: 5207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1581ms (Views: 1451.5ms | ActiveRecord: 32.4ms | Allocations: 19886)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 14:41:28 +0300
+Started GET "/log_out" for ::1 at 2020-04-20 14:41:28 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (145.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by SessionsController#destroy as HTML
+  [1m[35m (172.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 109ms (ActiveRecord: 0.0ms | Allocations: 1007)
+
+
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (33.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 434.5ms | Allocations: 6377)
+Started GET "/" for ::1 at 2020-04-20 14:41:29 +0300
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1085ms (Views: 717.5ms | ActiveRecord: 212.4ms | Allocations: 21676)
+
+
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 61.3ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 934ms (Views: 923.8ms | ActiveRecord: 0.0ms | Allocations: 14310)
+
+
+Started GET "/users" for ::1 at 2020-04-20 14:41:32 +0300
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 36ms (ActiveRecord: 0.0ms | Allocations: 454)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-20 14:41:32 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 358ms (Views: 329.8ms | ActiveRecord: 0.0ms | Allocations: 14278)
+
+
+Started GET "/users/new" for ::1 at 2020-04-20 14:41:34 +0300
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 28ms (ActiveRecord: 0.0ms | Allocations: 457)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-20 14:41:34 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 428ms (Views: 412.5ms | ActiveRecord: 0.0ms | Allocations: 14274)
+
+
+Started POST "/sessions" for ::1 at 2020-04-20 14:41:41 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"rj6kSuQ9pOBZD4LP46WTCl0xnylV71ZCRu4rTw5inodBrfxvsQiR7uOMBeQcK5AdD0KsrlkgBkDgv6DE1o3d+g==", "name"=>"dolskanp", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`name` = 'dolskanp' LIMIT 1[0m
+  ↳ app/models/user.rb:12:in `authenticate'
+Redirected to http://localhost:3000/commands
+Completed 302 Found in 52ms (ActiveRecord: 0.6ms | Allocations: 1073)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 14:41:41 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (22.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (34.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 133.9ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 467ms (Views: 305.9ms | ActiveRecord: 58.6ms | Allocations: 18306)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 14:41:43 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (13.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (13.0ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 58.5ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 156ms (Views: 126.4ms | ActiveRecord: 27.0ms | Allocations: 18288)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 14:41:46 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (15.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 36.3ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 133ms (Views: 114.2ms | ActiveRecord: 16.2ms | Allocations: 18289)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 14:48:04 +0300
+  [1m[35m (34.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (71.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (43.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (25.1ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 618.9ms | Allocations: 12784)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 500 Internal Server Error in 23151ms (ActiveRecord: 510.1ms | Allocations: 1838991)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `log_out_path' for #<#<Class:0x0000000008531f08>:0x000000000ac9b0a8>):
+    26:              <li class="nav-item active">
+    27:                <% if current_user %>
+    28:                  Logged in as <b> <%= current_user.name %></b>.
+    29:                  <%= link_to "Log out", log_out_path %>&nbsp
+    30:                  <%= link_to "Account", account_path(current_user) %>
+    31: 
+    32:                <% else %>
+  
+app/views/layouts/application.html.erb:29
+Started GET "/commands" for ::1 at 2020-04-20 14:48:56 +0300
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 7625)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 115ms (Views: 85.5ms | ActiveRecord: 25.1ms | Allocations: 29574)
+
+
+Started GET "/log_out" for ::1 at 2020-04-20 14:49:00 +0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 434)
+
+
+Started GET "/" for ::1 at 2020-04-20 14:49:00 +0300
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (17.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 3604)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 57.4ms | ActiveRecord: 17.6ms | Allocations: 17769)
+
+
+Started GET "/users" for ::1 at 2020-04-20 14:49:02 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (34.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 70.1ms | Allocations: 5599)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 131ms (Views: 93.4ms | ActiveRecord: 35.4ms | Allocations: 20402)
+
+
+Started GET "/users/new" for ::1 at 2020-04-20 14:49:03 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mCommand Load (9.1ms)[0m  [1m[34mSELECT `commands`.* FROM `commands`[0m
+  ↳ app/views/users/_form.html.erb:32
+  Rendered users/_form.html.erb (Duration: 118.0ms | Allocations: 4559)
+  Rendered users/new.html.erb within layouts/application (Duration: 119.6ms | Allocations: 4881)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 179ms (Views: 168.5ms | ActiveRecord: 9.1ms | Allocations: 19120)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 14:49:04 +0300
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (28.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 35.1ms | Allocations: 3605)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 61.7ms | ActiveRecord: 28.6ms | Allocations: 17740)
+
+
+  [1m[35m (64.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT GET_LOCK('4052481305532234750', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddConfirmationToUser (20200420115528)
+  [1m[35m (2591.8ms)[0m  [1m[35mALTER TABLE `users` ADD `confirmation_token` varchar(255)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (34.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200420115528')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (82.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4052481305532234750')[0m
+  [1m[35m (92.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/commands" for ::1 at 2020-04-20 15:05:00 +0300
+  [1m[35m (26.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (13.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (37.2ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 64.2ms | Allocations: 7444)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 68.6ms | ActiveRecord: 50.4ms | Allocations: 22741)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 15:05:02 +0300
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (39.1ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 52.4ms | Allocations: 3595)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 137ms (Views: 96.1ms | ActiveRecord: 40.2ms | Allocations: 17720)
+
+
+Started GET "/users" for ::1 at 2020-04-20 15:05:04 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 10239)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 65.8ms | ActiveRecord: 1.7ms | Allocations: 25196)
+
+
+Started GET "/users/new" for ::1 at 2020-04-20 15:05:05 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mCommand Load (19.2ms)[0m  [1m[34mSELECT `commands`.* FROM `commands`[0m
+  ↳ app/views/users/_form.html.erb:32
+  Rendered users/_form.html.erb (Duration: 24.1ms | Allocations: 2750)
+  Rendered users/new.html.erb within layouts/application (Duration: 24.4ms | Allocations: 2826)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 58.6ms | ActiveRecord: 19.2ms | Allocations: 16893)
+
+
+Started GET "/log_in" for ::1 at 2020-04-20 15:05:07 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 523.5ms | Allocations: 228895)
+Completed 500 Internal Server Error in 529ms (ActiveRecord: 0.0ms | Allocations: 230115)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sessions_path' for #<#<Class:0x000000000e51a320>:0x000000000e511680>
+Did you mean?  session):
+     8: 
+     9:       <h1>Log in</h1>
+    10: 
+    11:       <%= form_tag sessions_path do %>
+    12:         <p>
+    13:           <%= label_tag :name %><br />
+    14:           <%= text_field_tag :name, params[:name] %>
+  
+app/views/sessions/new.html.erb:11
+Started GET "/users/new" for ::1 at 2020-04-20 15:05:12 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mCommand Load (0.6ms)[0m  [1m[34mSELECT `commands`.* FROM `commands`[0m
+  ↳ app/views/users/_form.html.erb:32
+  Rendered users/_form.html.erb (Duration: 5.3ms | Allocations: 2703)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2779)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.6ms | Allocations: 16865)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 15:05:13 +0300
+Processing by CommandsController#index as HTML
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.4ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3605)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 1.9ms | Allocations: 17742)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 16:30:39 +0300
+  [1m[35m (125.7ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by CommandsController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 525)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-20 16:30:39 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 298)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 626ms (ActiveRecord: 0.0ms | Allocations: 242977)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_path' for #<#<Class:0x000000000a731f68>:0x000000000a72a790>):
+    16: 					<li class="nav-item active">
+    17: 						<%= link_to 'Main', commands_path, class: 'btn btn-outline-primary pull-xs-right' %>
+    18: 						<%= link_to 'New command', new_command_path, class: 'btn btn-outline-primary pull-xs-right' %>
+    19: 						<%= link_to 'All user', users_path, class: 'btn btn-outline-success pull-xs-right' %>
+    20: 						<%= link_to 'New user', new_user_path, class: 'btn btn-outline-success pull-xs-right' %>
+    21: 
+    22: 
+  
+app/views/layouts/application.html.erb:19
+Started GET "/sessions/new" for ::1 at 2020-04-20 16:30:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 603ms (ActiveRecord: 0.0ms | Allocations: 242793)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_path' for #<#<Class:0x000000000a731f68>:0x000000000e7f94b0>):
+    16: 					<li class="nav-item active">
+    17: 						<%= link_to 'Main', commands_path, class: 'btn btn-outline-primary pull-xs-right' %>
+    18: 						<%= link_to 'New command', new_command_path, class: 'btn btn-outline-primary pull-xs-right' %>
+    19: 						<%= link_to 'All user', users_path, class: 'btn btn-outline-success pull-xs-right' %>
+    20: 						<%= link_to 'New user', new_user_path, class: 'btn btn-outline-success pull-xs-right' %>
+    21: 
+    22: 
+  
+app/views/layouts/application.html.erb:19
+Started GET "/sessions/new" for ::1 at 2020-04-20 16:31:04 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 296)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.0ms | Allocations: 14504)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 16:31:06 +0300
+Processing by CommandsController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-20 16:31:06 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 54.8ms | ActiveRecord: 0.0ms | Allocations: 14336)
+
+
+Started GET "/commands/new" for ::1 at 2020-04-20 16:31:07 +0300
+Processing by CommandsController#new as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 456)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-20 16:31:07 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms | Allocations: 14323)
+
+
+Started GET "/users" for ::1 at 2020-04-20 16:31:08 +0300
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 511)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-20 16:31:08 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms | Allocations: 14323)
+
+
+Started GET "/log_in" for ::1 at 2020-04-20 16:31:09 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 54.5ms | ActiveRecord: 0.0ms | Allocations: 14311)
+
+
+Started POST "/sessions" for ::1 at 2020-04-20 16:31:14 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"5Ma9vB8/2UZAUbuMbcdYMMzEhAs1t5nTMVDIjYf0EV0LVeWZSgrsSPrSPKeSSVsnnre3jDl4ydGXAUMGXxtSIA==", "name"=>"dolskanp", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (38.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`name` = 'dolskanp' LIMIT 1[0m
+  ↳ app/models/user.rb:12:in `authenticate'
+Redirected to http://localhost:3000/commands
+Completed 302 Found in 688ms (ActiveRecord: 655.7ms | Allocations: 8353)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 16:31:15 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (63.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (1.0ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 104.3ms | Allocations: 7552)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 180ms (Views: 96.8ms | ActiveRecord: 78.2ms | Allocations: 23425)
+
+
+Started GET "/users" for ::1 at 2020-04-20 16:31:17 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 5216)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 60.2ms | ActiveRecord: 2.1ms | Allocations: 20118)
+
+
+Started GET "/users/new" for ::1 at 2020-04-20 16:31:19 +0300
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands`[0m
+  ↳ app/views/users/_form.html.erb:32
+  Rendered users/_form.html.erb (Duration: 5.4ms | Allocations: 2750)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2826)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 67.3ms | ActiveRecord: 1.0ms | Allocations: 17507)
+
+
+Started GET "/commands/new" for ::1 at 2020-04-20 16:31:20 +0300
+Processing by CommandsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/new.html.erb within layouts/application
+  Rendered commands/_form.html.erb (Duration: 2.9ms | Allocations: 1246)
+  Rendered commands/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1560)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 62.0ms | ActiveRecord: 0.6ms | Allocations: 16364)
+
+
+Started GET "/commands" for ::1 at 2020-04-20 16:31:21 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (44.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.7ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 52.7ms | Allocations: 3616)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 113ms (Views: 63.9ms | ActiveRecord: 46.3ms | Allocations: 18347)
+
+
+Started GET "/" for ::1 at 2020-04-21 11:05:50 +0300
+  [1m[35m (22.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (31.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 33.6ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 14950ms (Views: 14810.4ms | ActiveRecord: 134.4ms | Allocations: 1577818)
+
+
+Started GET "/commands" for ::1 at 2020-04-21 11:06:16 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (18.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (35.3ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 192.9ms | Allocations: 12167)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 302ms (Views: 202.5ms | ActiveRecord: 57.6ms | Allocations: 29023)
+
+
+Started GET "/users" for ::1 at 2020-04-21 11:06:18 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 30.1ms | Allocations: 5604)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 85.2ms | ActiveRecord: 2.7ms | Allocations: 21101)
+
+
+Started GET "/users/new" for ::1 at 2020-04-21 11:06:19 +0300
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands`[0m
+  ↳ app/views/users/_form.html.erb:32
+  Rendered users/_form.html.erb (Duration: 132.3ms | Allocations: 4549)
+  Rendered users/new.html.erb within layouts/application (Duration: 134.2ms | Allocations: 4876)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 217ms (Views: 211.7ms | ActiveRecord: 1.3ms | Allocations: 19736)
+
+
+Started GET "/log_out" for ::1 at 2020-04-21 11:06:57 +0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 444)
+
+
+Started GET "/" for ::1 at 2020-04-21 11:06:58 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 296)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 53.5ms | ActiveRecord: 0.0ms | Allocations: 14371)
+
+
+Started GET "/commands" for ::1 at 2020-04-21 11:06:59 +0300
+Processing by CommandsController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 483)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-21 11:06:59 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms | Allocations: 14336)
+
+
+Started GET "/users" for ::1 at 2020-04-21 11:07:00 +0300
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 465)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-21 11:07:00 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 14340)
+
+
+Started GET "/users/new" for ::1 at 2020-04-21 11:07:01 +0300
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 465)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-21 11:07:01 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms | Allocations: 14334)
+
+
+Started GET "/log_in" for ::1 at 2020-04-21 11:07:03 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms | Allocations: 14332)
+
+
+Started POST "/sessions" for ::1 at 2020-04-21 11:07:08 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"SZ4p7nfNa0nN+k/kWy4jNEhineYlWxCrPkM9SJAe1ZqmDXHLIvheR3d5yM+koCAjGhGuYSmUQKmYErbDSPGW5w==", "name"=>"dolskanp", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`name` = 'dolskanp' LIMIT 1[0m
+  ↳ app/models/user.rb:12:in `authenticate'
+Redirected to http://localhost:3000/commands
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms | Allocations: 1281)
+
+
+Started GET "/commands" for ::1 at 2020-04-21 11:07:08 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.4ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3622)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 60.5ms | ActiveRecord: 2.0ms | Allocations: 18390)
+
+
+Started GET "/users" for ::1 at 2020-04-21 11:07:10 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 5208)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 59.5ms | ActiveRecord: 1.9ms | Allocations: 19957)
+
+
+Started GET "/users/new" for ::1 at 2020-04-21 11:07:13 +0300
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mCommand Load (0.5ms)[0m  [1m[34mSELECT `commands`.* FROM `commands`[0m
+  ↳ app/views/users/_form.html.erb:32
+  Rendered users/_form.html.erb (Duration: 5.1ms | Allocations: 2695)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2771)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 59.4ms | ActiveRecord: 1.0ms | Allocations: 17466)
+
+
+Started GET "/users" for ::1 at 2020-04-21 11:07:14 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ app/views/users/index.html.erb:19
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 12 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 5206)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 75.7ms | ActiveRecord: 2.7ms | Allocations: 19971)
+
+
+Started GET "/commands/new" for ::1 at 2020-04-21 11:07:15 +0300
+Processing by CommandsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/new.html.erb within layouts/application
+  Rendered commands/_form.html.erb (Duration: 3.9ms | Allocations: 1246)
+  Rendered commands/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1560)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 59.3ms | ActiveRecord: 0.5ms | Allocations: 16380)
+
+
+Started GET "/commands" for ::1 at 2020-04-21 11:07:15 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.4ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3616)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 60.7ms | ActiveRecord: 1.9ms | Allocations: 18362)
+
+
+Started GET "/commands?search=eeee" for ::1 at 2020-04-21 11:07:20 +0300
+Processing by CommandsController#index as HTML
+  Parameters: {"search"=>"eeee"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands` WHERE (name LIKE '%eeee%')[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (12.9ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE (name LIKE '%eeee%') LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 1538)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 59.4ms | ActiveRecord: 13.8ms | Allocations: 16318)
+
+
+Started GET "/commands" for ::1 at 2020-04-21 11:07:25 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 61.3ms | ActiveRecord: 2.3ms | Allocations: 18358)
+
+
+Started GET "/commands?search=rrtee" for ::1 at 2020-04-21 11:07:32 +0300
+Processing by CommandsController#index as HTML
+  Parameters: {"search"=>"rrtee"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands` WHERE (name LIKE '%rrtee%')[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (0.4ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` WHERE (name LIKE '%rrtee%') LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1686)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 59.7ms | ActiveRecord: 1.6ms | Allocations: 16460)
+
+
+Started GET "/commands" for ::1 at 2020-04-21 11:07:33 +0300
+Processing by CommandsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 114 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering commands/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `commands`[0m
+  ↳ app/views/commands/index.html.erb:18
+  [1m[36mCommand Load (1.0ms)[0m  [1m[34mSELECT `commands`.* FROM `commands` LIMIT 9 OFFSET 0[0m
+  ↳ app/views/commands/index.html.erb:23
+  Rendered commands/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 60.9ms | ActiveRecord: 2.5ms | Allocations: 18354)
+
+
