@@ -66,10 +66,10 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
-    bootstrap (4.0.0)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (>= 1.12.9, < 2)
-      sass (>= 3.5.2)
+    bootstrap (4.3.1)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 1.14.3, < 2)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     byebug (11.1.2)
     capybara (3.32.1)
@@ -124,8 +124,12 @@ GEM
       dry-monads (>= 0.4.0)
     erubi (1.9.0)
     execjs (2.7.0)
+<<<<<<< HEAD
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
+=======
+    ffi (1.12.2)
+>>>>>>> origin/dependabot/bundler/people/bootstrap-4.3.1
     ffi (1.12.2-x64-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -153,12 +157,19 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
+    msgpack (1.3.3)
     msgpack (1.3.3-x64-mingw32)
+<<<<<<< HEAD
     multi_json (1.14.1)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
+=======
+    mysql2 (0.5.3)
+>>>>>>> origin/dependabot/bundler/people/bootstrap-4.3.1
     mysql2 (0.5.3-x64-mingw32)
     nio4r (2.5.2)
+    nokogiri (1.10.9)
+      mini_portile2 (~> 2.4.0)
     nokogiri (1.10.9-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     oauth2 (1.4.4)
@@ -265,6 +276,16 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sassc (2.3.0)
+      ffi (~> 1.9)
+    sassc (2.3.0-x64-mingw32)
+      ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -315,12 +336,13 @@ GEM
     zeitwerk (2.3.0)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
   acts_as_votable
   bootsnap (>= 1.4.2)
-  bootstrap (~> 4.0.0.alpha4)
+  bootstrap (~> 4.3.1)
   byebug
   capybara (>= 2.15)
   carrierwave (~> 2.0, >= 2.0.2)
