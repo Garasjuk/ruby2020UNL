@@ -127,6 +127,10 @@ GEM
 <<<<<<< HEAD
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
+<<<<<<< HEAD
+=======
+    ffi (1.12.2)
+>>>>>>> origin/dependabot/bundler/people/bootstrap-4.3.1
 =======
     ffi (1.12.2)
 >>>>>>> origin/dependabot/bundler/people/bootstrap-4.3.1
@@ -163,6 +167,10 @@ GEM
     multi_json (1.14.1)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
+<<<<<<< HEAD
+=======
+    mysql2 (0.5.3)
+>>>>>>> origin/dependabot/bundler/people/bootstrap-4.3.1
 =======
     mysql2 (0.5.3)
 >>>>>>> origin/dependabot/bundler/people/bootstrap-4.3.1
