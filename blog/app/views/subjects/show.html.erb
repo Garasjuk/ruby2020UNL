@@ -1,0 +1,15 @@
+<article class="blog">
+    <section class="blog-head">
+      <div class="blog-body">
+        <h4>Show page</h4>
+          <h2> <%= @subject.topic %> </h2>
+                <p>Status: <b><%= @subject.status %></b></p>
+                <p><%= @subject.description %></p>
+
+
+                  <%= link_to 'Edit', edit_subject_path(@subject), class: 'btn btn-secondary' %>
+              
+                <%= link_to 'Delete', subject_path(@subject), method: :delete, data:{confirm: 'Are you sure?'} ,class: 'btn btn-danger' %></p>
+          </div>
+    </section>
+</article>

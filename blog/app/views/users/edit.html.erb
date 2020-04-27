@@ -1,0 +1,28 @@
+
+
+<article class="blog">
+  <section class="blog-head">
+    <div class="container">
+
+
+
+      <h1>Edit user</h1>
+
+    <%= form_for @user do |f| %>
+
+        <p>
+          <%= f.label :username %><br />
+          <%= f.text_field :username %>
+        </p>
+        <p>
+          <%= f.label :password %><br />
+          <%= f.password_field :password %>
+        </p>
+        <p>
+          <%=f.submit class: 'btn btn-dark' %>
+        </p>
+      <% end %>
+
+    </div>
+  </section>
+</article>

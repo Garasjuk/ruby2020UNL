@@ -1,0 +1,41 @@
+
+
+<article class="blog">
+  <section class="blog-head">
+    <div class="container">
+      <h1>Role user</h1>
+        <%= form_for @role do |f| %>
+
+          <p>
+            <%= f.label :create_at %><br />
+            <%= f.radio_button :create_at, true %> TRUE
+            <%= f.radio_button :create_at, false %> FALSE
+          </p>
+          <p>
+            <%= f.label :update_at %><br />
+            <%= f.radio_button :update_at, true %> TRUE
+            <%= f.radio_button :update_at, false %> FALSE
+          </p>
+          <p>
+            <%= f.label :read_at %><br />
+            <%= f.radio_button :read_at, true %> TRUE
+            <%= f.radio_button :read_at, false %> FALSE
+          </p>
+          <p>
+            <%= f.label :delete_at %><br />
+            <%= f.radio_button :delete_at, true %> TRUE
+            <%= f.radio_button :delete_at, false %> FALSE
+          </p>
+          <p>
+            <%= f.label :admin_at %><br />
+            <%= f.radio_button :admin_at, true %> TRUE
+            <%= f.radio_button :admin_at, false %> FALSE
+          </p>
+          <p>
+            <%=f.submit class: 'btn btn-dark' %>
+          </p>
+        <% end %>
+
+    </div>
+  </section>
+</article>
