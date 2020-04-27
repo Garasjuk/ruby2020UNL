@@ -1,0 +1,44 @@
+<article class="blog">
+    <section class="blog-head">
+      <div class="blog-body">
+        <h4>User  page</h4>
+          <h2> <%= @user.username %> </h2>
+
+
+              <%= form_for @role do |f| %>
+
+                <p>
+                  <%= f.label :create_at %><br />
+                  <%= f.radio_button :create_at, true %> TRUE
+                  <%= f.radio_button :create_at, false %> FALSE
+                </p>
+                <p>
+                  <%= f.label :update_at %><br />
+                  <%= f.radio_button :update_at, true %> TRUE
+                  <%= f.radio_button :update_at, false %> FALSE
+                </p>
+                <p>
+                  <%= f.label :read_at %><br />
+                  <%= f.radio_button :read_at, true %> TRUE
+                  <%= f.radio_button :read_at, false %> FALSE
+                </p>
+                <p>
+                  <%= f.label :delete_at %><br />
+                  <%= f.radio_button :delete_at, true %> TRUE
+                  <%= f.radio_button :delete_at, false %> FALSE
+                </p>
+                <p>
+                  <%= f.label :admin_at %><br />
+                  <%= f.radio_button :admin_at, true %> TRUE
+                  <%= f.radio_button :admin_at, false %> FALSE
+                </p>
+                <p>
+                  <%=f.submit class: 'btn btn-dark' %>
+                </p>
+              <% end %>
+
+                <%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-secondary' %>
+                <%= link_to 'Delete', user_path(@user), method: :delete, data:{confirm: 'Are you sure?'} ,class: 'btn btn-danger' %></p>
+          </div>
+    </section>
+</article>

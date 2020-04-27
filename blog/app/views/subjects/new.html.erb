@@ -1,0 +1,25 @@
+<article class="blog">
+    <section class="blog-head">
+      <div class="blog-body">
+        <%= form_for :subject, html: {multipart: true}, url: subjects_path do |f| %>
+
+          <p>
+            Topic <br>
+            <%=f.text_field :topic %>
+          </p>
+          <p>
+            Description <br>
+            <%=f.text_area :description %>
+          </p>
+
+          <p>
+            <%= f.hidden_field :status, :value => 'new' %>
+          </p>
+
+          <p>
+            <%=f.submit class: 'btn btn-dark' %>
+          </p>
+        <% end %>
+      </div>
+    </section>
+</article>

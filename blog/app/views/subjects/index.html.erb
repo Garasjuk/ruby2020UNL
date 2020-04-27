@@ -1,0 +1,26 @@
+<article class="blog">
+    <section class="blog-head">
+      <div class="container">
+        <h2>Main page</h2>
+
+            <%# <%= will_paginate @blog, :renderer => 'BootstrapPagination::Rails' %> %>
+
+          <div class="row">
+            <% @subject.each do |subject| %>
+                    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                      <h2><%= link_to subject.topic, subject_path(subject) %></h2>
+                      <br>
+                      <small>
+
+                        <%= link_to 'Edit', edit_subject_path(subject), class: 'btn btn-warning' %>
+                        <%= link_to 'Destroy', subject_path(subject), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br>
+                      </small>
+                      <hr>
+                    </div>
+            <% end %>
+          </div>
+
+        <%# <%= will_paginate @blog, :renderer => 'BootstrapPagination::Rails' %> %>
+        </div>
+    </section>
+</article>
