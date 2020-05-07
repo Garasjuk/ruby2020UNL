@@ -1,0 +1,23 @@
+<article class="ajax">
+    <section class="ajax-head">
+      <div class="container">
+        <h2>Main page</h2>
+
+
+
+        <div class="load-more-container">
+          <%= link_to 'Show article', show_article_url, class: 'show_article' , remote: true   %>
+        </div>
+
+
+
+          <div class="row", id="articles">
+            <%= render @articles %>
+          </div>
+
+
+
+
+        </div>
+    </section>
+</article>
