@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
     if params[:id]
       @articles = Article.where('id < ?', params[:id]).limit(5)
     else
-      @articles = Article.limit(1)
+      @articles = Article.limit(0)
     end
     respond_to do |format|
       format.html
@@ -13,19 +13,44 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    # render js: "alert('The number is: #{params[:id]}')"
-    # @article = Article.all
-    respond_to  do |format|
-    #   format.js {@article}
-      format.js
+    @article = Article.find(params[:id])
+  end
+
+  def edit
+      @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(subject_params)
+      redirect_to subjects_path
+    else
+      render :edit
     end
   end
 
+  def create
+    @article = Article.new(article_params)
+      if @article.save
+        redirect_to articles_path
+      else
+        render :new
+      end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to articles_path
+  end
+
+
   def show_article
-    @articles = Article.where(created_at: (Time.now.midnight - 7.day)..Time.now.midnight)
+    # @articles = Article.where(created_at: (Date.today - 7.day)..Date.today)
+    @articles = Article.where('created_at BETWEEN ? AND ?', Date.today - 7.day, Date.today + 1.day)
     respond_to do |format|
       format.json { render json: @articles}
-      format.js
+      format.js {render :action => "index" }
     end
 
     # @article_list = Article.all
@@ -33,4 +58,7 @@ class ArticlesController < ApplicationController
      # render layout: false
   end
 
+  private def article_params
+    params.require(:article).permit(:title, :body)
+  end
 end
