@@ -22,26 +22,44 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    if @article.update(subject_params)
-      redirect_to subjects_path
-    else
-      render :edit
+    respond_to do |format|
+      if @article.update(article_params)
+        format.html { redirect_to articles_path }
+        format.js {render action: "show_article" }
+        format.json { render json: @article }
+
+        # redirect_to articles_path
+      else
+        format.html { render action: "edit" }
+
+        # render :edit
+      end
     end
   end
 
   def create
     @article = Article.new(article_params)
+    respond_to do |format|
       if @article.save
-        redirect_to articles_path
+        format.html { redirect_to articles_path }
+        format.js {render action: "show_article" }
+        format.json { render json: @article }
+        # redirect_to articles_path
       else
-        render :new
+        format.html { render action: "new" }
       end
+    end
   end
 
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-    redirect_to articles_path
+    respond_to do |format|
+      format.html { redirect_to articles_path }
+      # format.json { head :no_content }
+      format.js {render action: "show_article" }
+    end
+    # redirect_to articles_path
   end
 
 

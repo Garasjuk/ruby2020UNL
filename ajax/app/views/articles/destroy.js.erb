@@ -1,0 +1,33 @@
+// $('.delete').bind('ajax:success', function (){
+//   $.ajax({
+//              url: ('/destroy/'+ id) ,
+//              type: 'DELETE',
+//              dataType: 'json',
+//              success: function(data, status, xhr) {
+//                 alert("Deleted successfully");
+//                console.log(data);
+//
+//              }
+//          })
+//
+// });
+
+$('.delete').bind('ajax:success', function (){
+
+  alert("Deleted successfully");
+
+  // $(this).closest('tr').fadeOut();
+  // $.ajax({
+  //            url: '/show_article',
+  //            type: 'GET',
+  //            dataType: 'json',
+  //            success: function(data, status, xhr) {
+  //              // document.getElementById('articles').html = data;
+  //                // $('#articles').text(data);
+  //                // $('#articles').json(data);
+  //                //alert(data);
+  //              console.log(data);
+  //            }
+  //          })
+
+});

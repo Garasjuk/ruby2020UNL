@@ -4,7 +4,7 @@
           <br>
           <small>
             <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
-            <%= link_to 'Destroy', article_path(article), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger' %><br>
+            <%= link_to 'Destroy', article_path(article), method: :delete, data:{confirm: 'Are you sure?'}, class: 'btn btn-danger', id: 'delete', remote: true %><br>
           </small>
           <hr>
         </div>

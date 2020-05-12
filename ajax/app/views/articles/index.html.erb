@@ -6,7 +6,7 @@
 
 
         <div class="load-more-container">
-          <%= link_to 'Show article', show_article_url, class: 'show_article' , remote: true   %>
+          <%= link_to 'Show article', show_article_url, class: 'btn btn-success', id: 'show_article' , remote: true   %>
         </div>
 
 
@@ -14,8 +14,19 @@
              <%= render @articles %>
         </div>
 
+        <div class="row">
+          <%= form_for :article, url: articles_path,  remote: true do |f| %>
 
-        
+              <%= f.label :title %>
+              <%= f.text_field :title %>
+            <br>
+              <%= f.label :body %>
+              <%= f.text_field :body %>
+            <%= f.submit class: "btn btn-link" %>
+          <% end %>
+
+        </div>
+
 
         </div>
     </section>
