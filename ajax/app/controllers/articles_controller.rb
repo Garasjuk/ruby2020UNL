@@ -45,6 +45,8 @@ class ArticlesController < ApplicationController
         format.js {render action: "show_article" }
         format.json { render json: @article }
         # redirect_to articles_path
+        # WebNotificationsChannel.broadcast_to @article, "@room_message"
+        ActionCable.server.broadcast("web_notifications_channel", @article.title)
       else
         format.html { render action: "new" }
       end

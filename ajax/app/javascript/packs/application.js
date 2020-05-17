@@ -17,7 +17,40 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 //= require jquery
-
+//= require action_cable
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+
+import 'bootstrap'
+import './src/application.scss'
+// document.addEventListener("turbolinks:load", () => {
+//   $('[data-toggle="tooltip"]').tooltip()
+// })
+
+/* global $, App, ActionCable */
+// this.App = {}
+// const cablePath = document.querySelector('meta[name=action-cable-url]').getAttribute('content')
+// App.cable = ActionCable.createConsumer(cablePath)
+// App.webNotificationsChannel = App.cable.subscriptions.create(
+//   {
+//     channel: 'WebNotificationsChannel'
+//   },
+//   {
+//     received (data) {
+//       console.log(data)
+//       if (data.userId === null) {
+//         $('#hello-all-users').html(`The time for all users is ${data.time}`)
+//       } else {
+//         $(`#hello-user-${data.userId}`).html(`The time for you is ${data.time}`)
+//       }
+//     },
+//     connected () {
+//       console.log('connected')
+//     },
+//     disconnected () {
+//       console.log('disconnected')
+//     }
+//   }
+// )
