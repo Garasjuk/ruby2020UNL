@@ -1,0 +1,133 @@
+.App-header {
+  text-align: center;
+  height: 150px;
+  padding: 20px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.tile {
+  height: 330px;
+  width: 300px;
+  margin: 10px;
+  background: lightyellow;
+  float: left;
+  font-size: 11px;
+  text-align: left;
+}
+
+.newBookButton {
+  background: darkblue;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding:10px;
+}
+.deleteBookButton {
+  background: red;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding:10px;
+}
+.editBookButton {
+  background: #ffc30a;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding:10px;
+}
+.imageBook {
+  height: 150px;
+  width: 100px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding:10px;
+}
+
+.bouton-image {
+  content: "";
+
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: text-top;
+
+    background-position : center center;
+    background-repeat:no-repeat;
+
+}
+.icon-play-no{
+     background-image : url(./images/star_no.png);
+     background-size: cover;
+     display: inline-block;
+     height: 15px;
+     width: 15px;
+}
+.icon-play-yes{
+     background-image : url(./images/star_yes.png);
+     background-size: cover;
+     display: inline-block;
+     height: 15px;
+     width: 15px;
+}
+
+.icon-read-no{
+     background-image : url(./images/read-no.png);
+     background-size: cover;
+     display: inline-block;
+     height: 15px;
+     width: 15px;
+}
+.icon-read-yes{
+     background-image : url(./images/read-yes.png);
+     background-size: cover;
+     display: inline-block;
+     height: 15px;
+     width: 15px;
+}
+
+.input {
+  border: 0;
+  background: none;
+  outline: none;
+  margin-top:10px;
+  width: 140px;
+  font-size: 11px;
+}
+
+.input:focus {
+  border: solid 1px lightgrey;
+}
+
+textarea {
+  resize: none;
+  height: 90px;
+  font-size: 11px;
+}
+
+.deleteButton {
+  visibility: hidden;
+  float: right;
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  color: red;
+}
+
+.tile:hover .deleteButton {
+  visibility: visible;
+}
