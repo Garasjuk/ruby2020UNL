@@ -1,0 +1,22 @@
+
+default: &default
+  adapter: mysql2
+  pool: 10
+
+  host: localhost
+  tcp: 3306
+  username: admin
+  password: 12345
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+  database: shop_db
+
+test:
+  <<: *default
+  database: shop_db
+
+production:
+  <<: *default
+  database: shop_db
