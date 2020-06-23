@@ -146,6 +146,7 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rouge (3.20.0)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -211,6 +212,7 @@ DEPENDENCIES
   mysql2 (~> 0.5.2)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.1)
+  rouge
   sass-rails (>= 6)
   selenium-webdriver
   turbolinks (~> 5)
