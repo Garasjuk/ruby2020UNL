@@ -232,3 +232,1104 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-06-24 15:49:45 +0300
+  [1m[35m (66.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (60.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 246.9ms | Allocations: 82431)
+Completed 500 Internal Server Error in 379ms (ActiveRecord: 0.0ms | Allocations: 85510)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<#<Class:0x00000000086480e0>:0x0000000008639568>):
+    1: <%= react_component 'Login' %>
+  
+app/views/products/index.html.erb:1
+Started GET "/" for ::1 at 2020-06-24 16:03:25 +0300
+  [1m[35m (62.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (23.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 231.2ms | Allocations: 82434)
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.0ms | Allocations: 85443)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<#<Class:0x00000000089ba840>:0x0000000008983ea8>):
+    1: <%= react_component 'Login' %>
+  
+app/views/products/index.html.erb:1
+Started GET "/" for ::1 at 2020-06-24 16:03:29 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 193.9ms | Allocations: 81439)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 0.0ms | Allocations: 82127)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<#<Class:0x00000000089ba840>:0x000000000e5bceb8>):
+    1: <%= react_component 'Login' %>
+  
+app/views/products/index.html.erb:1
+Started GET "/" for 127.0.0.1 at 2020-06-24 16:05:34 +0300
+  [1m[35m (54.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 222.4ms | Allocations: 82434)
+Completed 500 Internal Server Error in 251ms (ActiveRecord: 0.0ms | Allocations: 85443)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<#<Class:0x0000000008aec470>:0x0000000008ad4e60>):
+    1: <%= react_component 'Login' %>
+  
+app/views/products/index.html.erb:1
+Started GET "/" for ::1 at 2020-06-24 16:19:36 +0300
+  [1m[35m (47.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (16.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 440)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: b144ddac30c858c9a74c
+Version: webpack 4.43.0
+Time: 15118ms
+Built at: 2020-06-24 4:20:01 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-b3c38677eab43bfb36c2.js  1.31 MiB       application  [emitted] [immutable]  application
+     js/application-b3c38677eab43bfb36c2.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-ef22641f4e6d79727645.js  1.19 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-ef22641f4e6d79727645.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-b3c38677eab43bfb36c2.js js/application-b3c38677eab43bfb36c2.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-ef22641f4e6d79727645.js js/server_rendering-ef22641f4e6d79727645.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 35 hidden modules
+
+ERROR in ./app/javascript/components/login.jsx
+Module not found: Error: Can't resolve '../login.css' in 'D:\Ruby\shop\app\javascript\components'
+ @ ./app/javascript/components/login.jsx 26:0-22
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/login.jsx
+Module not found: Error: Can't resolve 'react-bootstrap' in 'D:\Ruby\shop\app\javascript\components'
+ @ ./app/javascript/components/login.jsx 25:0-79 58:42-51 67:42-54 74:51-62 87:44-53 96:42-54 103:55-66 115:44-50
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 24147ms (Views: 24125.6ms | ActiveRecord: 0.0ms | Allocations: 40309)
+
+
+Started GET "/log_in" for ::1 at 2020-06-24 16:20:07 +0300
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for SessionsController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-06-24 16:20:09 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.0ms | Allocations: 6778)
+
+
+Started GET "/log_in" for ::1 at 2020-06-24 16:20:17 +0300
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for SessionsController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-06-24 16:20:21 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms | Allocations: 6749)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:22:57 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 68)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 83316ee74f9bea6e0ed7
+Version: webpack 4.43.0
+Time: 3368ms
+Built at: 2020-06-24 4:23:04 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-f770ad3b665ba1e73a70.js  1.31 MiB       application  [emitted] [immutable]  application
+     js/application-f770ad3b665ba1e73a70.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-3b01bf859309120512cd.js  1.19 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-3b01bf859309120512cd.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-f770ad3b665ba1e73a70.js js/application-f770ad3b665ba1e73a70.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-3b01bf859309120512cd.js js/server_rendering-3b01bf859309120512cd.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 35 hidden modules
+
+ERROR in ./app/javascript/components/login.jsx
+Module not found: Error: Can't resolve 'react-bootstrap' in 'D:\Ruby\shop\app\javascript\components'
+ @ ./app/javascript/components/login.jsx 25:0-79 58:42-51 67:42-54 74:51-62 87:44-53 96:42-54 103:55-66 115:44-50
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 6781ms (Views: 6780.5ms | ActiveRecord: 0.0ms | Allocations: 9064)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:24:09 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 1bf4c48fb1598f6d5915
+Version: webpack 4.43.0
+Time: 3100ms
+Built at: 2020-06-24 4:24:15 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-f1677d706095f3b9da91.js  1.31 MiB       application  [emitted] [immutable]  application
+     js/application-f1677d706095f3b9da91.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-d55253eddf6bfb4491f9.js  1.19 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-d55253eddf6bfb4491f9.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-f1677d706095f3b9da91.js js/application-f1677d706095f3b9da91.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-d55253eddf6bfb4491f9.js js/server_rendering-d55253eddf6bfb4491f9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 35 hidden modules
+
+ERROR in ./app/javascript/components/login.jsx
+Module not found: Error: Can't resolve '../login.css' in 'D:\Ruby\shop\app\javascript\components'
+ @ ./app/javascript/components/login.jsx 25:0-22
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 5744ms (Views: 5743.4ms | ActiveRecord: 0.0ms | Allocations: 9062)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:28:04 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in D:/Ruby/shop/public/packs
+[Webpacker] Hash: 0f7633efc7740702c27c
+Version: webpack 4.43.0
+Time: 2841ms
+Built at: 2020-06-24 4:28:10 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-a8e47a246c0cc97b001e.js  1.31 MiB       application  [emitted] [immutable]  application
+     js/application-a8e47a246c0cc97b001e.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-fc37afef7fb7ddb4f616.js  1.19 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-fc37afef7fb7ddb4f616.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-a8e47a246c0cc97b001e.js js/application-a8e47a246c0cc97b001e.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-fc37afef7fb7ddb4f616.js js/server_rendering-fc37afef7fb7ddb4f616.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 35 hidden modules
+
+WARNING in ./app/javascript/components/login.jsx
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: D:\Ruby\shop\app\javascript\components\login.jsx: Expected corresponding JSX closing tag for <p> (17:31)
+
+  15 |       <div className="Login">
+  16 |         <form onSubmit={handleSubmit}>
+> 17 |           <p>Username or Email:</br> <input type = 'text' name = 'name'></input></p>
+     |                                ^
+  18 |           <p>Password:</br> <input type = 'text' name = 'pass'></input></p>
+  19 | 
+  20 |           <input type="submit">Login</Submit>
+    at Object._raise (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:754:17)
+    at Object.raiseWithData (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:747:17)
+    at Object.raise (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:741:17)
+    at Object.jsxParseElementAt (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4620:16)
+    at Object.jsxParseElementAt (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4588:32)
+    at Object.jsxParseElementAt (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4588:32)
+    at Object.jsxParseElementAt (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4588:32)
+    at Object.jsxParseElement (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4646:17)
+    at Object.parseExprAtom (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4653:19)
+    at Object.parseExprSubscripts (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9693:23)
+    at Object.parseMaybeUnary (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9673:21)
+    at Object.parseExprOps (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9543:23)
+    at Object.parseMaybeConditional (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9516:23)
+    at Object.parseMaybeAssign (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9471:21)
+    at Object.parseParenAndDistinguishExpression (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10304:28)
+    at Object.parseExprAtom (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10044:21)
+    at Object.parseExprAtom (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4658:20)
+    at Object.parseExprSubscripts (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9693:23)
+    at Object.parseMaybeUnary (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9673:21)
+    at Object.parseExprOps (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9543:23)
+    at Object.parseMaybeConditional (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9516:23)
+    at Object.parseMaybeAssign (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9471:21)
+    at Object.parseExpression (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9423:23)
+    at Object.parseReturnStatement (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11560:28)
+    at Object.parseStatementContent (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11241:21)
+    at Object.parseStatement (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11193:17)
+    at Object.parseBlockOrModuleBlockBody (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11768:25)
+    at Object.parseBlockBody (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11754:10)
+    at Object.parseBlock (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11738:10)
+    at Object.parseFunctionBody (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10745:24)
+ @ ./app/javascript/components sync ^\.\/.*$ ./login.jsx
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 5397ms (Views: 5395.8ms | ActiveRecord: 0.0ms | Allocations: 9099)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:28:26 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in D:/Ruby/shop/public/packs
+[Webpacker] Hash: af8e2de53f3f0f88f8b6
+Version: webpack 4.43.0
+Time: 2762ms
+Built at: 2020-06-24 4:28:32 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-bf195e8d9ee01317169b.js  1.31 MiB       application  [emitted] [immutable]  application
+     js/application-bf195e8d9ee01317169b.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-8d898df58119182d62ce.js  1.19 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-8d898df58119182d62ce.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-bf195e8d9ee01317169b.js js/application-bf195e8d9ee01317169b.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-8d898df58119182d62ce.js js/server_rendering-8d898df58119182d62ce.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 35 hidden modules
+
+WARNING in ./app/javascript/components/login.jsx
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: D:\Ruby\shop\app\javascript\components\login.jsx: Expected corresponding JSX closing tag for <p> (16:31)
+
+  14 |       <>
+  15 |       
+> 16 |           <p>Username or Email:</br> <input type = 'text' name = 'name'></input></p>
+     |                                ^
+  17 |           <p>Password:</br> <input type = 'text' name = 'pass'></input></p>
+  18 | 
+  19 | 
+    at Object._raise (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:754:17)
+    at Object.raiseWithData (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:747:17)
+    at Object.raise (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:741:17)
+    at Object.jsxParseElementAt (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4620:16)
+    at Object.jsxParseElementAt (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4588:32)
+    at Object.jsxParseElement (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4646:17)
+    at Object.parseExprAtom (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4653:19)
+    at Object.parseExprSubscripts (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9693:23)
+    at Object.parseMaybeUnary (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9673:21)
+    at Object.parseExprOps (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9543:23)
+    at Object.parseMaybeConditional (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9516:23)
+    at Object.parseMaybeAssign (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9471:21)
+    at Object.parseParenAndDistinguishExpression (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10304:28)
+    at Object.parseExprAtom (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10044:21)
+    at Object.parseExprAtom (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4658:20)
+    at Object.parseExprSubscripts (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9693:23)
+    at Object.parseMaybeUnary (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9673:21)
+    at Object.parseExprOps (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9543:23)
+    at Object.parseMaybeConditional (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9516:23)
+    at Object.parseMaybeAssign (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9471:21)
+    at Object.parseExpression (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9423:23)
+    at Object.parseReturnStatement (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11560:28)
+    at Object.parseStatementContent (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11241:21)
+    at Object.parseStatement (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11193:17)
+    at Object.parseBlockOrModuleBlockBody (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11768:25)
+    at Object.parseBlockBody (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11754:10)
+    at Object.parseBlock (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11738:10)
+    at Object.parseFunctionBody (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10745:24)
+    at Object.parseFunctionBodyAndFinish (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10728:10)
+    at Object.parseMethod (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10690:10)
+ @ ./app/javascript/components sync ^\.\/.*$ ./login.jsx
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 5344ms (Views: 5342.7ms | ActiveRecord: 0.0ms | Allocations: 9099)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:30:00 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 69)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: a759e7a9cce2c323bee4
+Version: webpack 4.43.0
+Time: 3203ms
+Built at: 2020-06-24 4:30:06 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-48e72c76274495c552df.js  1.31 MiB       application  [emitted] [immutable]  application
+     js/application-48e72c76274495c552df.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-b3051eedb257aa67452e.js  1.19 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-b3051eedb257aa67452e.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-48e72c76274495c552df.js js/application-48e72c76274495c552df.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-b3051eedb257aa67452e.js js/server_rendering-b3051eedb257aa67452e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 35 hidden modules
+
+ERROR in ./app/javascript/components/login.jsx
+Module not found: Error: Can't resolve '../login.css' in 'D:\Ruby\shop\app\javascript\components'
+ @ ./app/javascript/components/login.jsx 25:0-22
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 5675ms (Views: 5674.0ms | ActiveRecord: 0.0ms | Allocations: 9059)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:30:30 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 68)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in D:/Ruby/shop/public/packs
+[Webpacker] Hash: 0cd9189ef4aaf6eff3ac
+Version: webpack 4.43.0
+Time: 3277ms
+Built at: 2020-06-24 4:30:37 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-4d4be197f9bec8984b7d.js  1.31 MiB       application  [emitted] [immutable]  application
+     js/application-4d4be197f9bec8984b7d.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-655c15757de54389ade1.js  1.19 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-655c15757de54389ade1.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-4d4be197f9bec8984b7d.js js/application-4d4be197f9bec8984b7d.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-655c15757de54389ade1.js js/server_rendering-655c15757de54389ade1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 35 hidden modules
+
+Completed 200 OK in 5983ms (Views: 5981.7ms | ActiveRecord: 0.0ms | Allocations: 9176)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:31:22 +0300
+  [1m[35m (26.7ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (32.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 440)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 83.7ms | ActiveRecord: 0.0ms | Allocations: 15222)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:31:34 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.0ms | Allocations: 6751)
+
+
+Started GET "/log_in" for ::1 at 2020-06-24 16:37:36 +0300
+  [1m[35m (46.5ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for SessionsController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-06-24 16:37:48 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.0ms | Allocations: 6781)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:38:18 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms | Allocations: 6742)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:38:19 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms | Allocations: 6744)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:38:20 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.0ms | Allocations: 6746)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:38:20 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 68)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.0ms | Allocations: 6746)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:38:20 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms | Allocations: 6747)
+
+
+Started GET "/sign_up" for ::1 at 2020-06-24 16:38:21 +0300
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for UsersController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-06-24 16:38:24 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 68)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.0ms | Allocations: 6744)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:40:22 +0300
+  [1m[35m (104.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (41.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 440)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 95ms (Views: 80.4ms | ActiveRecord: 0.0ms | Allocations: 15219)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:40:24 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.0ms | Allocations: 6750)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:41:06 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 69)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in D:/Ruby/shop/public/packs
+[Webpacker] Hash: 26f2f1d6d4bcbdfec0d5
+Version: webpack 4.43.0
+Time: 2810ms
+Built at: 2020-06-24 4:41:11 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-e86ab49257ffcc64000a.js  1.31 MiB       application  [emitted] [immutable]  application
+     js/application-e86ab49257ffcc64000a.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-e1f3d28661673786a1d9.js  1.19 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-e1f3d28661673786a1d9.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-e86ab49257ffcc64000a.js js/application-e86ab49257ffcc64000a.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-e1f3d28661673786a1d9.js js/server_rendering-e1f3d28661673786a1d9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 188 bytes {application} {server_rendering} [built]
+[./app/javascript/login.css] 592 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/login.css] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/login.css 736 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 33 hidden modules
+
+Completed 200 OK in 5353ms (Views: 5352.6ms | ActiveRecord: 0.0ms | Allocations: 9132)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:46:06 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 167)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in D:/Ruby/shop/public/packs
+[Webpacker] Hash: 12ec8712186153969d83
+Version: webpack 4.43.0
+Time: 3132ms
+Built at: 2020-06-24 4:46:13 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-83d08baee6cc8ef12b13.js  1.31 MiB       application  [emitted] [immutable]  application
+     js/application-83d08baee6cc8ef12b13.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-506c475106098cf005b6.js  1.19 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-506c475106098cf005b6.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-83d08baee6cc8ef12b13.js js/application-83d08baee6cc8ef12b13.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-506c475106098cf005b6.js js/server_rendering-506c475106098cf005b6.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 212 bytes {application} {server_rendering} [built]
+[./app/javascript/login.css] 592 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/login.css] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/login.css 736 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 34 hidden modules
+
+Completed 200 OK in 6417ms (Views: 6415.5ms | ActiveRecord: 0.0ms | Allocations: 10390)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:46:35 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 69)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in D:/Ruby/shop/public/packs
+[Webpacker] Hash: f54b7cebb42a243689f9
+Version: webpack 4.43.0
+Time: 2164ms
+Built at: 2020-06-24 4:46:40 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-5fba1ef2a9036b6c3cd0.js   1.3 MiB       application  [emitted] [immutable]  application
+     js/application-5fba1ef2a9036b6c3cd0.js.map  1.49 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-9846a5313c17acdcebd6.js  1.18 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-9846a5313c17acdcebd6.js.map  1.35 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-5fba1ef2a9036b6c3cd0.js js/application-5fba1ef2a9036b6c3cd0.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-9846a5313c17acdcebd6.js js/server_rendering-9846a5313c17acdcebd6.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 212 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 32 hidden modules
+
+WARNING in ./app/javascript/components/Login.jsx
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: D:\Ruby\shop\app\javascript\components\Login.jsx: Expected corresponding JSX closing tag for <p> (16:31)
+
+  14 |       <>
+  15 | 
+> 16 |           <p>Username or Email:</br> <input type = 'text' name = 'name'></input></p>
+     |                                ^
+  17 |           <p>Password:</br> <input type = 'text' name = 'pass'></input></p>
+  18 | 
+  19 | 
+    at Object._raise (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:754:17)
+    at Object.raiseWithData (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:747:17)
+    at Object.raise (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:741:17)
+    at Object.jsxParseElementAt (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4620:16)
+    at Object.jsxParseElementAt (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4588:32)
+    at Object.jsxParseElement (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4646:17)
+    at Object.parseExprAtom (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4653:19)
+    at Object.parseExprSubscripts (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9693:23)
+    at Object.parseMaybeUnary (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9673:21)
+    at Object.parseExprOps (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9543:23)
+    at Object.parseMaybeConditional (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9516:23)
+    at Object.parseMaybeAssign (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9471:21)
+    at Object.parseParenAndDistinguishExpression (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10304:28)
+    at Object.parseExprAtom (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10044:21)
+    at Object.parseExprAtom (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:4658:20)
+    at Object.parseExprSubscripts (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9693:23)
+    at Object.parseMaybeUnary (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9673:21)
+    at Object.parseExprOps (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9543:23)
+    at Object.parseMaybeConditional (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9516:23)
+    at Object.parseMaybeAssign (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9471:21)
+    at Object.parseExpression (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:9423:23)
+    at Object.parseReturnStatement (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11560:28)
+    at Object.parseStatementContent (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11241:21)
+    at Object.parseStatement (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11193:17)
+    at Object.parseBlockOrModuleBlockBody (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11768:25)
+    at Object.parseBlockBody (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11754:10)
+    at Object.parseBlock (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:11738:10)
+    at Object.parseFunctionBody (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10745:24)
+    at Object.parseFunctionBodyAndFinish (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10728:10)
+    at Object.parseMethod (D:\Ruby\shop\node_modules\@babel\parser\lib\index.js:10690:10)
+ @ ./app/javascript/components sync ^\.\/.*$ ./Login.jsx
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 4725ms (Views: 4724.2ms | ActiveRecord: 0.0ms | Allocations: 9124)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:46:40 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.0ms | Allocations: 6758)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:46:42 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 57.7ms | ActiveRecord: 0.0ms | Allocations: 6763)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:47:14 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.0ms | Allocations: 6753)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:47:17 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 47.4ms | ActiveRecord: 0.0ms | Allocations: 6752)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:47:18 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.0ms | Allocations: 6760)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:48:29 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in D:/Ruby/shop/public/packs
+[Webpacker] Hash: 22e594b1302b488731f7
+Version: webpack 4.43.0
+Time: 3062ms
+Built at: 2020-06-24 4:48:35 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-09f7d5b736f9893bb1dc.js  1.31 MiB       application  [emitted] [immutable]  application
+     js/application-09f7d5b736f9893bb1dc.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-57866002ad8c967b6e2c.js   1.2 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-57866002ad8c967b6e2c.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-09f7d5b736f9893bb1dc.js js/application-09f7d5b736f9893bb1dc.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-57866002ad8c967b6e2c.js js/server_rendering-57866002ad8c967b6e2c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 212 bytes {application} {server_rendering} [built]
+[./app/javascript/login.css] 592 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/login.css] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/login.css 736 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 34 hidden modules
+
+Completed 200 OK in 6454ms (Views: 6453.2ms | ActiveRecord: 0.0ms | Allocations: 9193)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:50:28 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 68)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in D:/Ruby/shop/public/packs
+[Webpacker] Hash: 994d48ccf15ab7fac1a7
+Version: webpack 4.43.0
+Time: 3111ms
+Built at: 2020-06-24 4:50:34 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-f045fbb0f3be8893f357.js  1.31 MiB       application  [emitted] [immutable]  application
+     js/application-f045fbb0f3be8893f357.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-69b9150747ee3b7ffbfe.js   1.2 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-69b9150747ee3b7ffbfe.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-f045fbb0f3be8893f357.js js/application-f045fbb0f3be8893f357.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-69b9150747ee3b7ffbfe.js js/server_rendering-69b9150747ee3b7ffbfe.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 212 bytes {application} {server_rendering} [built]
+[./app/javascript/login.css] 592 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/login.css] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/login.css 736 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 34 hidden modules
+
+Completed 200 OK in 5655ms (Views: 5653.8ms | ActiveRecord: 0.0ms | Allocations: 9188)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:53:28 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in D:/Ruby/shop/public/packs
+[Webpacker] Hash: 841d78bda898e1855457
+Version: webpack 4.43.0
+Time: 3133ms
+Built at: 2020-06-24 4:53:35 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-c962428237c22c1e3ac1.js  1.31 MiB       application  [emitted] [immutable]  application
+     js/application-c962428237c22c1e3ac1.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-46ceb8d91ae1f89382c1.js   1.2 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-46ceb8d91ae1f89382c1.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-c962428237c22c1e3ac1.js js/application-c962428237c22c1e3ac1.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-46ceb8d91ae1f89382c1.js js/server_rendering-46ceb8d91ae1f89382c1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 212 bytes {application} {server_rendering} [built]
+[./app/javascript/login.css] 592 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/login.css] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/login.css 736 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 34 hidden modules
+
+Completed 200 OK in 7257ms (Views: 7256.0ms | ActiveRecord: 0.0ms | Allocations: 9197)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:55:43 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in D:/Ruby/shop/public/packs
+[Webpacker] Hash: f9b5e97cb211939f2231
+Version: webpack 4.43.0
+Time: 3181ms
+Built at: 2020-06-24 4:55:50 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-070d60b2e05d5916fa05.js  1.32 MiB       application  [emitted] [immutable]  application
+     js/application-070d60b2e05d5916fa05.js.map   1.5 MiB       application  [emitted] [dev]        application
+         js/hello_react-c1bcbbf77c42459f3ec5.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-c1bcbbf77c42459f3ec5.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-056f8becebed7bd1c88b.js   1.2 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-056f8becebed7bd1c88b.js.map  1.37 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-070d60b2e05d5916fa05.js js/application-070d60b2e05d5916fa05.js.map
+Entrypoint hello_react = js/hello_react-c1bcbbf77c42459f3ec5.js js/hello_react-c1bcbbf77c42459f3ec5.js.map
+Entrypoint server_rendering = js/server_rendering-056f8becebed7bd1c88b.js js/server_rendering-056f8becebed7bd1c88b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 254 bytes {application} {server_rendering} [built]
+[./app/javascript/login.css] 592 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/login.css] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/login.css 736 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 35 hidden modules
+
+Completed 200 OK in 6580ms (Views: 6579.2ms | ActiveRecord: 0.0ms | Allocations: 9150)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:55:57 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms | Allocations: 6766)
+
+
+Started GET "/" for ::1 at 2020-06-24 16:55:59 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.0ms | Allocations: 6771)
+
+
